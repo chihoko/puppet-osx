@@ -118,6 +118,16 @@ class { 'osx::aidrop::all_interfaces':
 }
 ```
 
+## Airport
+
+`osx::airport::disconnect_on_logout` - disconnect from airport on logout
+
+```puppet
+class { 'osx::airport:disconnect_on_logout':
+  enabled => true
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
