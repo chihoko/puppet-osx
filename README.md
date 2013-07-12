@@ -155,6 +155,14 @@ class { 'osx::airport::join_mode_fallback':
 }
 ```
 
+`osx::airport::remember_recent_networks` - toggle airport's "Remember Recent Networks" preference
+
+```puppet
+class { 'osx::airport::remember_recent_networks':
+  enabled => true
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
