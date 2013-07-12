@@ -59,6 +59,14 @@ class { 'osx::dock::icon_bounce':
 }
 ```
 
+`osx::dock::icon_size` - set size of icons in dock in pixels
+
+```puppet
+class { 'osx::dock::icon_size':
+  size => 36
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
