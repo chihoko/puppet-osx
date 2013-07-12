@@ -50,6 +50,15 @@ class { 'osx::dock::hidden_app_dimming':
 }
 ```
 
+`osx::dock::icon_bounce` - toggle bouncing application icon on launch or on activity
+
+```puppet
+class { 'osx::dock::icon_bounce':
+  on_app_launch => true,
+  on_app_activity => true,
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
