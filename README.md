@@ -179,6 +179,14 @@ class { 'osx::airport::require_password_to_change_networks':
 }
 ```
 
+`osx::airport::require_password_to_toggle_power` - toggle airport's "Require Password to Turn Wi-Fi On or Off" preference
+
+```puppet
+class { 'osx::airport::require_password_to_toggle_power':
+  enabled => true
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
