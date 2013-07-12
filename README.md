@@ -30,8 +30,6 @@ Just `include` any of these in your manifest.
 
 * `osx::dock::2d` - use the old flat dock style
 * `osx::dock::clear` - ensures the dock only contains apps that are running
-* `osx::dock::hide_indicator_lights` - remove the indicator lights below running
-  apps
 
 `osx::dock::autohide` - automatically hide the dock
 
@@ -64,6 +62,14 @@ class { 'osx::dock::icon_bounce':
 ```puppet
 class { 'osx::dock::icon_size':
   size => 36
+}
+```
+
+`osx::dock::indicator_lights` - toggle the indicator lights below running applications
+
+```puppet
+class { 'osx::dock::indicator_lights':
+  enabled => false
 }
 ```
 
