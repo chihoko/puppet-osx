@@ -198,6 +198,14 @@ class { 'osx::appearance::colors':
 }
 ```
 
+`osx::appearance::font_rendering_mode` - set rendering mode used to display text
+
+```puppet
+class { 'osx::appearance::font_rendering_mode':
+  mode => 1
+}
+```
+
 ## Desktop
 
 `osx::desktop::displayed_items` - display items on desktop
