@@ -254,6 +254,7 @@ class { 'osx::dialogs::auto_expanding_save_dialog':
 ```
 
 `osx::dialogs::file_view_mode` - set default file dialog view mode
+
 ```puppet
 class { 'osx::dialogs::file_vew_mode':
   mode => 'list'
@@ -263,12 +264,20 @@ class { 'osx::dialogs::file_vew_mode':
 ## Disk Images
 
 `osx::disk_images::auto_mount` - set disk images to auto-mount
+
 ```puppet
 class { 'osx::disk_images::auto_mount':
   enabled => true
 }
 ```
 
+`osx::disk_images::verification` - set verification of disk images
+
+```puppet
+class { 'osx::disk_images::verification':
+  enabled => true
+}
+```
 
 ## Required Puppet Modules
 
