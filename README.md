@@ -30,7 +30,6 @@ Just `include` any of these in your manifest.
 
 * `osx::dock::2d` - use the old flat dock style
 * `osx::dock::clear` - ensures the dock only contains apps that are running
-* `osx::dock::dim_hidden_apps` - dims icons of hidden apps
 * `osx::dock::hide_indicator_lights` - remove the indicator lights below running
   apps
 
@@ -40,6 +39,14 @@ Just `include` any of these in your manifest.
 class { 'osx::dock::autohide':
   enabled => true,
   delay   => 0,
+}
+```
+
+`osx::dock::hidden_app_dimming` - dims icons of hidden apps
+
+```puppet
+class { 'osx::dock::hidden_app_dimming':
+  enabled => true
 }
 ```
 
