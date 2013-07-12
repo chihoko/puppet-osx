@@ -206,6 +206,22 @@ class { 'osx::appearance::font_rendering_mode':
 }
 ```
 
+`osx::appearance::sidebar_icons` - set the size of the icons in the sidebar
+
+```puppet
+class { 'osx::appearance::sidebar_icons':
+  size => 'small'
+}
+
+class { 'osx::appearance::sidebar_icons':
+  size => 'medium'
+}
+
+class { 'osx::appearance::sidebar_icons':
+  size => 'large'
+}
+```
+
 ## Desktop
 
 `osx::desktop::displayed_items` - display items on desktop
