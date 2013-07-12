@@ -289,6 +289,14 @@ class { 'osx::disk_utility::advanced_image_options':
 }
 ```
 
+`osx::disk_utility::hidden_partitions` - toggle visibility of hidden partitions
+
+```puppet
+class { 'osx::disk_utility::hidden_partitions':
+  visible => true
+}
+```
+
 ## Required Puppet Modules
 
 * boxen

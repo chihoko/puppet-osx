@@ -9,6 +9,6 @@ class osx::disk_utility::hidden_partitions($visible) {
     user   => $::boxen_user,
     domain => 'com.apple.DiskUtility',
     key    => 'DUShowEveryPartition',
-    value  => $visible,
+    value  => $visible_int,
   }
 }
