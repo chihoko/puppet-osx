@@ -187,6 +187,17 @@ class { 'osx::airport::require_password_to_toggle_power':
 }
 ```
 
+## Appearance
+
+`osx::appearance::colors` - set main UI and highlight colors
+
+```puppet
+class { 'osx::appearance::colors':
+  main      => 'graphite',
+  highlight => 'graphite'
+}
+```
+
 ## Desktop
 
 `osx::desktop::displayed_items` - display items on desktop
