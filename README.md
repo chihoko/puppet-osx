@@ -279,6 +279,16 @@ class { 'osx::disk_images::verification':
 }
 ```
 
+## Disk Utility
+
+`osx::disk_utility::advanced_image_options` - toggle advanced image options in disk utility
+
+```puppet
+class { 'osx::disk_utility::advanced_image_options':
+  enabled => true
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
