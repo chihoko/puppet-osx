@@ -297,6 +297,16 @@ class { 'osx::disk_utility::hidden_partitions':
 }
 ```
 
+## Displays
+
+`osx::displays::auto_brightness_adjustment` - toggle ambient light-dependent automatic brightness adjustment
+
+```puppet
+class { 'osx::displays::auto_brightness_adjustment':
+  enabled => true
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
