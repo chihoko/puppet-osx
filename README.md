@@ -142,6 +142,19 @@ class { 'osx::airport::join_mode':
 }
 ```
 
+`osx::airport::join_mode_fallback` - set airport join mode fallback to one of the following:
+
+* Prompt
+* JoinOpen
+* KeepLooking
+* DoNothing
+
+```puppet
+class { 'osx::airport::join_mode_fallback':
+  mode => 'Prompt'
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
