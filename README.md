@@ -73,6 +73,14 @@ class { 'osx::dock::indicator_lights':
 }
 ```
 
+`osx::dock::itunes_notifications` - toggle the indicator lights below running applications
+
+```puppet
+class { 'osx::dock::itunes_notifications':
+  enabled => false
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
