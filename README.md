@@ -235,6 +235,16 @@ class { 'osx::desktop::displayed_items':
 }
 ```
 
+## Dialogs
+
+`osx::dialogs::auto_expanding_print_dialog` - expand print panel by default
+
+```puppet
+class { 'osx::dialogs::auto_expanding_print_dialog':
+  enabled => true
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
