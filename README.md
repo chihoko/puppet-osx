@@ -187,6 +187,19 @@ class { 'osx::airport::require_password_to_toggle_power':
 }
 ```
 
+## Desktop
+
+`osx::desktop::displayed_items` - display items on desktop
+
+```puppet
+class { 'osx::desktop::displayed_items':
+    internal_hard_drives => true,
+    external_hard_drives => true,
+    mounted_servers => true,
+    removable_media => true,
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
