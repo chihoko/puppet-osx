@@ -128,6 +128,20 @@ class { 'osx::airport:disconnect_on_logout':
 }
 ```
 
+`osx::airport::join_mode` - set airport join mode to one of the following:
+
+* Automatic
+* Preferred
+* Ranked
+* Recent
+* Strongest
+
+```puppet
+class { 'osx::airport::join_mode':
+  mode => 'Automatic'
+}
+```
+
 ## Required Puppet Modules
 
 * boxen
