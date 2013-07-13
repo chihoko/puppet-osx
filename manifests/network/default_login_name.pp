@@ -24,7 +24,7 @@ class osx::network::default_login_name(
       value  => true,
     }
 
-    boxen::osx_defaults { 'Removes Custom Default Name Setting - Part 2':
+    boxen::osx_defaults { 'Set Custom Default Name Setting - Part 2':
       user   => $::boxen_user,
       key    => 'DefaultName',
       domain => 'com.apple.NetworkAuthorization',

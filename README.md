@@ -530,6 +530,16 @@ class { 'osx::mouse::movement':
 }
 ```
 
+### Network
+
+`osx::network::default_login_name` - set custom default login name for networks
+
+```puppet
+class { 'osx::network::default_login_name':
+  default_name => 'name',
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
