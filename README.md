@@ -519,6 +519,17 @@ class { 'osx::mission_control::group_by_app':
 }
 ```
 
+### Mouse
+
+`osx::mouse::movement` - set scaling and speed of mouse cursor movement
+
+```puppet
+class { 'osx::mouse::movement':
+  scaling         => 10,
+  scrolling_speed => 10,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
