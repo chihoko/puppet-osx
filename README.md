@@ -183,6 +183,14 @@ class { 'osx::finder::animations':
 }
 ```
 
+`osx::finder::date_format` - set finder date format to 'relative' or 'absolute'
+
+```puppet
+class { 'osx::finder::date_format':
+  format => 'relative'
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
