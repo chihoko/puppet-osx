@@ -130,6 +130,15 @@ class { 'osx::energy::disk_sleep':
 }
 ```
 
+`osx::energy::display_sleep` - set time until display sleep on battery and plugged in
+
+```puppet
+class { 'osx::energy::display_sleep':
+  on_battery => 100,
+  when_plugged_in => 100,
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
