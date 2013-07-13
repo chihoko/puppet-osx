@@ -331,6 +331,14 @@ class { 'osx::itunes::automatic_device_backup_when_syncing':
 }
 ```
 
+`osx::itunes::automatic_sync` - set iTunes to automatically sync devices when connected
+
+```puppet
+class { 'osx::itunes::automatic_sync':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
