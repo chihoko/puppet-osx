@@ -339,6 +339,16 @@ class { 'osx::itunes::automatic_sync':
 }
 ```
 
+### Keyboard
+
+`osx::keyboard::accented_press_and_hold` - press and hold for accented characters
+
+```puppet
+class { 'osx::keyboard::accented_press_and_hold':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
