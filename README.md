@@ -119,6 +119,17 @@ class { 'osx::dock::style':
 }
 ```
 
+### Energy Settings
+
+`osx::energy::disk_sleep` - set time until disk sleep on battery and plugged in
+
+```puppet
+class { 'osx::energy::disk_sleep':
+  on_battery => 100,
+  when_plugged_in => 100,
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
