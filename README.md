@@ -260,6 +260,14 @@ class { 'osx::finder::path_bar':
 }
 ```
 
+`osx::finder::posix_title_path` - enable full POSIX path in finder title bar
+
+```puppet
+class { 'osx::finder::posix_title_path':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
