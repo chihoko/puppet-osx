@@ -349,6 +349,14 @@ class { 'osx::keyboard::accented_press_and_hold':
 }
 ```
 
+`osx::keyboard::autocorrect` - enable autocorrect
+
+```puppet
+class { 'osx::keyboard::autocorrect':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
