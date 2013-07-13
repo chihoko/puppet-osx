@@ -486,6 +486,13 @@ class { 'osx::menu_bar::date':
 }
 ```
 
+`osx::menu_bar::transparency` - set menu bar transparency
+```puppet
+class { 'osx::menu_bar::transparency':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
