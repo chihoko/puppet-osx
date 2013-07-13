@@ -448,6 +448,14 @@ class { 'osx::login::power_options':
 }
 ```
 
+`osx::login::retries_before_hint` - number of attempts before password hint is displayed
+
+```puppet
+class { 'osx::login::retries_before_hint':
+  attempts => 5
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
