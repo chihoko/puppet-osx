@@ -244,6 +244,14 @@ class { 'osx::finder::icon_arrangement':
 }
 ```
 
+`osx::finder::icon_previews` - enable icon previews in finder
+
+```puppet
+class { 'osx::finder::icon_previews':
+  enabled => false
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
