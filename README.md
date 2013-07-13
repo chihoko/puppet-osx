@@ -493,6 +493,16 @@ class { 'osx::menu_bar::transparency':
 }
 ```
 
+### Mission Control
+
+`osx::mission_control::animation` - set speed of transitioning into and out of mission control
+
+```puppet
+class { 'osx::mission_control::animation':
+  speed => 10
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
