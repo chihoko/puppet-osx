@@ -297,6 +297,14 @@ class { 'osx::firewall::auto_allow_signed_applications':
 }
 ```
 
+`osx::firewall::block_all_incoming_connections` - block all non-essential incoming connections
+
+```puppet
+class { 'osx::firewall::block_all_incoming_connections':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
