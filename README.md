@@ -503,6 +503,14 @@ class { 'osx::mission_control::animation':
 }
 ```
 
+`osx::mission_control::dashboard_visibility` - toggle visibility of dashboard as a space in mission control
+
+```puppet
+class { 'osx::mission_control::dashboard_visibility':
+  visible => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
