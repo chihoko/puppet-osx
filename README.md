@@ -167,6 +167,14 @@ class { 'osx::energy::sleep':
 * `osx::finder::empty_trash_securely` - enable Secure Empty Trash
 * `osx::finder::unhide_library` - unsets the hidden flag on ~/Library
 
+`osx::finder::allow_quit` - allow quit finder
+
+```puppet
+class { 'osx::finder::allow_quit':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
