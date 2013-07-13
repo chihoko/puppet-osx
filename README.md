@@ -17,19 +17,13 @@ osx::recovery_message { 'If this Mac is found, please call 123-456-7890': }
 
 Just `include` any of these in your manifest.
 
-### Global Settings
-
-* `osx::global::disable_key_press_and_hold` - disable press-and-hold for
-  accented character entry
-* `osx::global::enable_keyboard_control_access` - enables the keyboard for
-  navigating controls in dialogs
-* `osx::global::expand_print_dialog` - expand the print dialog by default
-* `osx::global::expand_save_dialog` - expand the save dialog by default
-
 ### Dock Settings
 
-* `osx::dock::2d` - use the old flat dock style
-* `osx::dock::clear` - ensures the dock only contains apps that are running
+`osx::dock::clear` - ensures the dock only contains apps that are running
+
+```puppet
+include osx::dock::clear
+```
 
 `osx::dock::autohide` - automatically hide the dock
 
