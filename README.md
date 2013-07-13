@@ -268,6 +268,14 @@ class { 'osx::finder::posix_title_path':
 }
 ```
 
+`osx::finder::quicklook_text_selection` - enable text selection in QuickLook Window
+
+```puppet
+class { 'osx::finder::quicklook_text_selection':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
