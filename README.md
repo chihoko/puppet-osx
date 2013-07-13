@@ -476,6 +476,16 @@ class { 'osx::menu_bar::airplay':
 }
 ```
 
+`osx::menu_bar::date` - set the format of the date in the menu bar and set the clock to analog
+
+```puppet
+
+class { 'osx::menu_bar::date':
+  format    => 'E MMM d  h:mm a',
+  is_analog => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
