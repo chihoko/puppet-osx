@@ -207,6 +207,16 @@ class { 'osx::finder::default_file_view_mode':
 }
 ```
 
+`osx::finder::default_location` - set finder default view location to one of the following:
+
+* 'home directory'
+
+```puppet
+class { 'osx::finder::default_location':
+  location => 'home directory'
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
