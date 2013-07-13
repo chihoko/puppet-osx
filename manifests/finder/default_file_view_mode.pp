@@ -15,7 +15,7 @@ class osx::finder::default_file_view_mode($mode) {
     user   => $::boxen_user,
     domain => 'com.apple.finder',
     key    => 'FXPreferredViewStyle',
-    value  => $mode,
+    value  => $mode_code,
     notify => [
       Exec['killall Finder'],
       Exec['Remove All .DS_Store Files'],

@@ -191,6 +191,22 @@ class { 'osx::finder::date_format':
 }
 ```
 
+`osx::finder::default_file_view_mode` - set finder default file view mode to one of the following:
+
+* list
+
+Not yet implemented:
+
+* icon
+* column
+* cover flow
+
+```puppet
+class { 'osx::finder::default_file_view_mode':
+  mode => 'list'
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
