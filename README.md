@@ -159,13 +159,7 @@ class { 'osx::energy::sleep':
 
 ### Finder Settings
 
-* `osx::finder::show_external_hard_drives_on_desktop`
-* `osx::finder::show_hard_drives_on_desktop`
-* `osx::finder::show_mounted_servers_on_desktop`
-* `osx::finder::show_removable_media_on_desktop`
-* `osx::finder::show_all_on_desktop` - does all of the above
-* `osx::finder::empty_trash_securely` - enable Secure Empty Trash
-* `osx::finder::unhide_library` - unsets the hidden flag on ~/Library
+`osx::finder::unhide_library` - unsets the hidden flag on ~/Library
 
 `osx::finder::allow_quit` - allow quit finder
 
@@ -314,12 +308,10 @@ These settings can be used like one-shots or customized.
   repeating
 
 ```puppet
-# Set the default value (35)
 include osx::global::key_repeat_delay
 
-# ... or set your own
 class { 'osx::global::key_repeat_delay':
-  delay => 10
+  delay => 35
 }
 ```
 
@@ -327,34 +319,20 @@ class { 'osx::global::key_repeat_delay':
   'presses'
 
 ```puppet
-# Set the default value (0)
 include osx::global::key_repeat_rate
 
-# ... or set your own
 class { 'osx::global::key_repeat_rate':
-  rate => 2
+  rate => 0
 }
 ```
 
 `osx::universal_access::cursor_size` - the amount the cursor will be zoomed
 
 ```puppet
-# Set the default value (1.5)
 include osx::universal_access::cursor_size
 
-# ... or set your own
 class { 'osx::universal_access::cursor_size':
-  zoom => 2
-}
-```
-
-`osx::dock::icon_size` - the size of the dock icons, in pixels
-
-```puppet
-include osx::dock::icon_size
-
-class { 'osx::dock::icon_size': 
-  size => 36
+  zoom => 1.5
 }
 ```
 
