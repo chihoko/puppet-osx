@@ -175,6 +175,14 @@ class { 'osx::finder::allow_quit':
 }
 ```
 
+`osx::finder::animations` - enable finder animations
+
+```puppet
+class { 'osx::finder::animations':
+  enabled => false
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
