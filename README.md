@@ -252,6 +252,14 @@ class { 'osx::finder::icon_previews':
 }
 ```
 
+`osx::finder::path_bar` - enable path bar in finder
+
+```puppet
+class { 'osx::finder::path_bar':
+  enabled => false
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
