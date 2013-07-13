@@ -287,6 +287,16 @@ class { 'osx::finder::status_bar':
 }
 ```
 
+### Firewall
+
+`osx::firewall::auto_allow_signed_applications` - allow signed apps to automatically accept incoming connections
+
+```puppet
+class { 'osx::firewall::auto_allow_signed_applications':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
