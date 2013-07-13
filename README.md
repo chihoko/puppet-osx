@@ -236,6 +236,14 @@ class { 'osx::finder::file_extensions':
 }
 ```
 
+`osx::finder::icon_arrangement` - set finder icon arrangement
+
+```puppet
+class { 'osx::finder::icon_arrangement':
+  style => 'name'
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
