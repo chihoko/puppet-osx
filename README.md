@@ -377,6 +377,16 @@ class { 'osx::keyboard::default_to_alternate_function_keys':
 }
 ```
 
+`osx::keyboard::illumination` - enabled keyboard illumination, automatic brightness depending on ambient light, and idle time before illumination turns off
+
+```puppet
+class { 'osx::keyboard::illumination':
+  enabled => true,
+  auto_dim => true,
+  auto_off_delay => 5,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
