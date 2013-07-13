@@ -416,6 +416,14 @@ class { 'osx::login::admin_information':
 }
 ```
 
+`osx::login::auto_login` - automatically login a user
+
+```puppet
+class { 'osx::login::auto_login':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
