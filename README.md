@@ -466,6 +466,16 @@ class { 'osx::login::style':
 }
 ```
 
+### Menu Bar
+
+`osx::menu_bar::airplay` - show the AirPlay Mirroring icon in the menu bar
+
+```puppet
+class { 'osx::menu_bar::airplay':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
