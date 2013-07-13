@@ -387,6 +387,14 @@ class { 'osx::keyboard::illumination':
 }
 ```
 
+`osx::keyboard::key_repeat_delay` - set the time in ms before key press repeats
+
+```puppet
+class { 'osx::keyboard::key_repeat_delay':
+  delay => 35,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
@@ -403,17 +411,6 @@ class { 'osx::keyboard::illumination':
 ## Customizable Settings
 
 These settings can be used like one-shots or customized.
-
-`osx::global::key_repeat_delay` - the amount of time (in ms) before a key starts
-  repeating
-
-```puppet
-include osx::global::key_repeat_delay
-
-class { 'osx::global::key_repeat_delay':
-  delay => 35
-}
-```
 
 `osx::global::key_repeat_rate` - the amount of time (in ms) before key repeat
   'presses'
