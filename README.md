@@ -432,6 +432,14 @@ class { 'osx::login::fast_user_switching':
 }
 ```
 
+`osx::login::guest` - enable guest account
+
+```puppet
+class { 'osx::login::guest':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
