@@ -440,6 +440,14 @@ class { 'osx::login::guest':
 }
 ```
 
+`osx::login::power_options` - show power options on the login screen
+
+```puppet
+class { 'osx::login::power_options':
+  shown => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
