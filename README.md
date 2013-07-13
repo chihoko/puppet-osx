@@ -285,6 +285,14 @@ class { 'osx::finder::springing':
 }
 ```
 
+`osx::finder::status_bar` - display status bar in finder
+
+```puppet
+class { 'osx::finder::status_bar':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
