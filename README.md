@@ -313,6 +313,14 @@ class { 'osx::firewall::logging_mode':
 }
 ```
 
+`osx::firewall::stealth_mode` - set whether firewall responds to innocuous requests like PING
+
+```puppet
+class { 'osx::firewall::stealth_mode':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
