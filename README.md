@@ -81,6 +81,15 @@ class { 'osx::dock::itunes_notifications':
 }
 ```
 
+`osx::dock::magnification` - toggles magnification of icons and sets icon magnification size
+
+```puppet
+class { 'osx::dock::magnification':
+  enabled => true,
+  magnified_icon_size => 48,
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`

@@ -9,7 +9,7 @@ class osx::dock::magnification(
     false: { $enabled_int = 0 }
   }
 
-  if $enable != undef {
+  if $enabled != undef {
     boxen::osx_defaults { 'Toggles Whether the Icons Magnify as the Cursor Gets Closer':
       user   => $::boxen_user,
       key    => 'magnification',
