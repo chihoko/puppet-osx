@@ -90,6 +90,14 @@ class { 'osx::dock::magnification':
 }
 ```
 
+`osx::dock::only_show_running_apps` - only show running applications in the dock
+
+```puppet
+class { 'osx::dock::only_show_running_apps':
+  enabled => true
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
