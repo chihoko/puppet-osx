@@ -511,6 +511,14 @@ class { 'osx::mission_control::dashboard_visibility':
 }
 ```
 
+`osx::mission_control::group_by_app` - group multiple windows for an app in mission control
+
+```puppet
+class { 'osx::mission_control::group_by_app':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
