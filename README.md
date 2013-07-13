@@ -321,6 +321,16 @@ class { 'osx::firewall::stealth_mode':
 }
 ```
 
+### iTunes
+
+`osx::itunes::automatic_device_backup_when_syncing` - set iTunes to automatically back up device on sync
+
+```puppet
+class { 'osx::itunes::automatic_device_backup_when_syncing':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
