@@ -1,7 +1,7 @@
 class osx::login::style($style) {
 
   case $style {
-    'name and password': { $style_code = 'SHOWFULLNAME' }
+    'name and password': { $style_code = 1 }
     default:             { $style_code = $style }
   }
 

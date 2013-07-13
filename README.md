@@ -456,6 +456,16 @@ class { 'osx::login::retries_before_hint':
 }
 ```
 
+`osx::login::style` - set the default login screen style to one of the following:
+
+* 'name and password'
+
+```puppet
+class { 'osx::login::style':
+  style => 'name and password'
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
