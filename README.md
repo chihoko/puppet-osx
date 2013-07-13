@@ -217,6 +217,16 @@ class { 'osx::finder::default_location':
 }
 ```
 
+`osx::finder::default_search_scope` - set finder default scope when using the search box in finder to one of the following:
+
+* 'home directory'
+
+```puppet
+class { 'osx::finder::default_search_scope':
+  scope => 'current folder'
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
