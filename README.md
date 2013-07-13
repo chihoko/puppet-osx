@@ -395,6 +395,15 @@ class { 'osx::keyboard::key_repeat_delay':
 }
 ```
 
+`osx::keyboard::key_repeat_rate` - the amount of time (in ms) before key repeat
+  'presses'
+
+```puppet
+class { 'osx::keyboard::key_repeat_rate':
+  rate => 0
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
@@ -411,17 +420,6 @@ class { 'osx::keyboard::key_repeat_delay':
 ## Customizable Settings
 
 These settings can be used like one-shots or customized.
-
-`osx::global::key_repeat_rate` - the amount of time (in ms) before key repeat
-  'presses'
-
-```puppet
-include osx::global::key_repeat_rate
-
-class { 'osx::global::key_repeat_rate':
-  rate => 0
-}
-```
 
 `osx::universal_access::cursor_size` - the amount the cursor will be zoomed
 
