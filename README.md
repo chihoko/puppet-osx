@@ -227,6 +227,15 @@ class { 'osx::finder::default_search_scope':
 }
 ```
 
+`osx::finder::file_extensions` - set finder to display all file extensions and warn when changing the file extension
+
+```puppet
+class { 'osx::finder::file_extensions':
+  display_all => true,
+  warn_on_change => false,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
