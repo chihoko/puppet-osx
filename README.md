@@ -357,6 +357,18 @@ class { 'osx::keyboard::autocorrect':
 }
 ```
 
+`osx::keyboard::control_access` - set keyboard access for controls to one of the following:
+
+* 'all_controls_including_dropdowns'
+* 'all_controls'
+* 'basic'
+
+```puppet
+class { 'osx::keyboard::control_access':
+  mode => 'basic',
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
