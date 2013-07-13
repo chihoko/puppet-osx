@@ -276,6 +276,15 @@ class { 'osx::finder::quicklook_text_selection':
 }
 ```
 
+`osx::finder::springing` - enable springing and set spring delay
+
+```puppet
+class { 'osx::finder::springing':
+  enabled => true,
+  delay => 0,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
