@@ -305,6 +305,14 @@ class { 'osx::firewall::block_all_incoming_connections':
 }
 ```
 
+`osx::firewall::logging_mode` - set firewall logging mode
+
+```puppet
+class { 'osx::firewall::logging_mode':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
