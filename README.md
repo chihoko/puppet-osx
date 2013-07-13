@@ -111,6 +111,14 @@ class { 'osx::dock::orientation':
 }
 ```
 
+`osx::dock::style` - set the style of the dock to 2D or 3D
+
+```puppet
+class { 'osx::dock::style':
+  style => '2D'
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
