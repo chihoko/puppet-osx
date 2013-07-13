@@ -369,6 +369,14 @@ class { 'osx::keyboard::control_access':
 }
 ```
 
+`osx::keyboard::default_to_alternate_function_keys` - default to "alternate" function keys when not holding the "fn" key
+
+```puppet
+class { 'osx::keyboard::default_to_alternate_function_keys':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
