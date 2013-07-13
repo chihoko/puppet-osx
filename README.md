@@ -139,6 +139,15 @@ class { 'osx::energy::display_sleep':
 }
 ```
 
+`osx::energy::hibernation` - set time until hibernation on battery and plugged in
+
+```puppet
+class { 'osx::energy::hibernation':
+  on_battery => 100,
+  when_plugged_in => 100,
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
