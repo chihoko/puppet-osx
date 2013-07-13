@@ -98,6 +98,19 @@ class { 'osx::dock::only_show_running_apps':
 }
 ```
 
+`osx::dock::orientation` - set the position of the dock relative to the desktop to on of the following values:
+
+* 'top'
+* 'bottom'
+* 'right'
+* 'left'
+
+```puppet
+class { 'osx::dock::orientation':
+  orientation => 'left'
+}
+```
+
 ### Finder Settings
 
 * `osx::finder::show_external_hard_drives_on_desktop`
