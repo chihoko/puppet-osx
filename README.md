@@ -406,6 +406,16 @@ class { 'osx::keyboard::key_repeat_rate':
 include osx::launchpad::reset
 ```
 
+### Login
+
+`osx::login::admin_information` - show admin information when clicking the clock on the login screen
+
+```puppet
+class { 'osx::login::admin_information':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
