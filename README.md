@@ -424,6 +424,14 @@ class { 'osx::login::auto_login':
 }
 ```
 
+`osx::login::fast_user_switching` - automatically login a user
+
+```puppet
+class { 'osx::login::fast_user_switching':
+  enabled => true
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
