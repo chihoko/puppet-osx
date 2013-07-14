@@ -748,6 +748,14 @@ class { 'osx::time_machine::local_backups':
 }
 ```
 
+`osx::time_machine::unsupported_network_volumes`
+
+```puppet
+class { 'osx::time_machine::unsupported_network_volumes':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
