@@ -676,6 +676,14 @@ class { 'osx::system::app_quarantine':
 }
 ```
 
+`osx::system::automatic_app_termination` - toggle whether to automatically quit idle apps
+
+```puppet
+class { 'osx::system::automatic_app_termination':
+  enable => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
