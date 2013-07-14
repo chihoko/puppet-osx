@@ -613,6 +613,16 @@ class { 'osx::security::system_preference_lock':
 }
 ```
 
+### Sound
+
+`osx::sound::bluetooth` - set the audio bitpool for bluetooth audio devices
+
+```puppet
+class { 'osx::sound::bluetooth':
+  audio_bitpool => 36,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
