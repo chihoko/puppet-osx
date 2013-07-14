@@ -623,6 +623,15 @@ class { 'osx::sound::bluetooth':
 }
 ```
 
+`osx::sound::ui` - toggle and set volume for UI sound effects
+
+```puppet
+class { 'osx::sound::ui':
+  enable => true,
+  level => 36,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
