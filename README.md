@@ -692,6 +692,14 @@ class { 'osx::system::crash_reporter':
 }
 ```
 
+`osx::system::host_name` - set your host name
+
+```puppet
+class { 'osx::system::host_name':
+  name => 'localHost',
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
