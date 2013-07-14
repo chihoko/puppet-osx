@@ -576,6 +576,14 @@ class { 'osx::safari::find_only_matches_at_beginning_of_word':
 }
 ```
 
+`osx::safari::homepage` - set the default safari homepage
+
+```puppet
+class { 'osx::safari::homepage':
+  page => 'github.com',
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
