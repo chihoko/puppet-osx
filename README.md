@@ -730,6 +730,16 @@ class { 'osx::system::save_windows_on_quit':
 include osx::system::ui_server
 ```
 
+### Time Machine
+
+`osx::time_machine::ask_to_use_new_disks_for_backup`
+
+```puppet
+class { 'osx::time_machine::ask_to_use_new_disks_for_backup':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
