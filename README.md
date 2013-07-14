@@ -640,6 +640,16 @@ class { 'osx::sound::volume_feedback':
 }
 ```
 
+### System
+
+`osx::system::update::automatic_downloads` - toggle downloading software updates in the background when available
+
+```puppet
+class { 'osx::system::update::automatic_downloads':
+  enable => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
