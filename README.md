@@ -684,6 +684,14 @@ class { 'osx::system::automatic_app_termination':
 }
 ```
 
+`osx::system::crash_reporter` - send usage statistics to Apple
+
+```puppet
+class { 'osx::system::crash_reporter':
+  enable => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
