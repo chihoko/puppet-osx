@@ -566,6 +566,16 @@ class { 'osx::printing::quit_when_finished':
 }
 ```
 
+### Safari
+
+`osx::safari::find_only_matches_at_beginning_of_word` - toggle whether "Find On Page" matches only the beginnings of words
+
+```puppet
+class { 'osx::safari::find_only_matches_at_beginning_of_word':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
