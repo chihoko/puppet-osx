@@ -658,6 +658,16 @@ class { 'osx::system::update::local_cdn':
 }
 ```
 
+`osx::system::update::schedule` - set the interval between software update checks to one of the following:
+
+* 'daily'
+
+```puppet
+class { 'osx::system::update::schedule':
+  frequencey => 'daily',
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
