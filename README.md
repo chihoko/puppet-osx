@@ -724,6 +724,12 @@ class { 'osx::system::save_windows_on_quit':
 }
 ```
 
+`osx::system::ui_server`
+
+```puppet
+include osx::system::ui_server
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
