@@ -556,6 +556,16 @@ class { 'osx::network::guest':
 }
 ```
 
+### Printing
+
+`osx::printing::quit_when_finished` - toggle whether the print dialog should disappear when all jobs are complete
+
+```puppet
+class { 'osx::printing::quit_when_finished':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
