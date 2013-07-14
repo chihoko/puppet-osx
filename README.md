@@ -716,6 +716,14 @@ class { 'osx::system::save_documents_to_icloud_by_default':
 }
 ```
 
+`osx::system::save_windows_on_quit` - save windows and positions when restarting/quitting
+
+```puppet
+class { 'osx::system::save_windows_on_quit':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
