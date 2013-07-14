@@ -708,6 +708,14 @@ class { 'osx::system::restart_on_hang':
 }
 ```
 
+`osx::system::save_documents_to_icloud_by_default` - save documents to iCloud by default
+
+```puppet
+class { 'osx::system::save_documents_to_icloud_by_default':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
