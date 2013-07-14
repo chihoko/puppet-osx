@@ -548,6 +548,14 @@ class { 'osx::network::dsstores':
 }
 ```
 
+`osx::network::guest` - enable guest access to shared folders
+
+```puppet
+class { 'osx::network::guest':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
