@@ -632,6 +632,14 @@ class { 'osx::sound::ui':
 }
 ```
 
+`osx::sound::volume_feedback` - toggle volume change feedback sound
+
+```puppet
+class { 'osx::sound::volume_feedback':
+  enable => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
