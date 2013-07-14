@@ -592,6 +592,17 @@ class { 'osx::safari::thumbnail_cache':
 }
 ```
 
+### Screensaver
+
+`osx::screensaver::password_protection` - set password requirement to disable sreen saver, and delay before screen saver is required
+
+```puppet
+class { 'osx::screensaver::password_protection':
+  enabled => true,
+  delay => 0,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
