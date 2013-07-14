@@ -650,6 +650,14 @@ class { 'osx::system::update::automatic_downloads':
 }
 ```
 
+`osx::system::update::local_cdn` - toggle downloading software updates in the background when available
+
+```puppet
+class { 'osx::system::update::local_cdn':
+  enable => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
