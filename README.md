@@ -740,6 +740,14 @@ class { 'osx::time_machine::ask_to_use_new_disks_for_backup':
 }
 ```
 
+`osx::time_machine::local_backups`
+
+```puppet
+class { 'osx::time_machine::local_backups':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
