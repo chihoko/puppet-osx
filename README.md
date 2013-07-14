@@ -668,16 +668,20 @@ class { 'osx::system::update::schedule':
 }
 ```
 
+`osx::system::app_quarantine` - toggle the downloaded app quarantine
+
+```puppet
+class { 'osx::system::app_quarantine':
+  enable => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
   holding Control
 * `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the
   scroll wheel
-
-### Miscellaneous Settings
-
-* `osx::disable_app_quarantine` - disable the downloaded app quarantine
 
 ## Customizable Settings
 
