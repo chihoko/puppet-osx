@@ -603,6 +603,16 @@ class { 'osx::screensaver::password_protection':
 }
 ```
 
+### Security
+
+`osx::security::system_preference_lock` - lock system preferences
+
+```puppet
+class { 'osx::security::system_preference_lock':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
