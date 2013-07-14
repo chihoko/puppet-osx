@@ -584,6 +584,14 @@ class { 'osx::safari::homepage':
 }
 ```
 
+`osx::safari::thumbnail_cache` - toggle cache for "Top Sites" and "History"
+
+```puppet
+class { 'osx::safari::thumbnail_cache':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
