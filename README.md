@@ -850,6 +850,15 @@ class { 'osx::touchpad::gestures::three_finger_vertical_swipe':
 }
 ```
 
+`osx::touchpad::movement` - set speed of trackpad cursor movement and trackpad scrolling
+
+```puppet
+class { 'osx::touchpad::movement':
+  scaling => 5,
+  scrolling_speed => 10,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
