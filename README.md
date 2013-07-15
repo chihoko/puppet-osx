@@ -886,13 +886,6 @@ class { 'osx::universal_access::assistive_device_access':
 include osx::universal_access::ctrl_mod_zoom
 ```
 
-* `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the
-  scroll wheel
-
-## Customizable Settings
-
-These settings can be used like one-shots or customized.
-
 `osx::universal_access::cursor_size` - the amount the cursor will be zoomed
 
 ```puppet
@@ -902,6 +895,9 @@ class { 'osx::universal_access::cursor_size':
   zoom => 1.5
 }
 ```
+
+* `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the
+  scroll wheel
 
 ## Airdrop
 
