@@ -820,6 +820,14 @@ class { 'osx::touchpad::gestures::tap_to_click':
 }
 ```
 
+`osx::touchpad::gestures::tap_to_drag` - toggle touchpad tap to drag
+
+```puppet
+class { 'osx::touchpad::gestures::tap_to_drag':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
