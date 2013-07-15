@@ -804,6 +804,14 @@ class { 'osx::touchpad::gestures::page_swiping':
 }
 ```
 
+`osx::touchpad::gestures::secondary_click` - toggle secondary 'right click' on internal toucpad, external touchpad, and magic mouse
+
+```puppet
+class { 'osx::touchpad::gestures::secondary_click':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
