@@ -925,6 +925,14 @@ class { 'osx::windows::miniaturize_on_double_click':
 }
 ```
 
+`osx::windows::scroll_bars` - set the scrollbar ode
+
+```puppet
+class { 'osx::windows::scroll_bars':
+  style => "Automatic"
+}
+```
+
 ## Airdrop
 
 ```puppet
