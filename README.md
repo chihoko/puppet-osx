@@ -906,6 +906,17 @@ class { 'osx::universal_access::flash_screen':
 
 `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the scroll wheel
 
+### Windows
+
+`osx::windows::animations` - toggle open/close window animations and set the length of time in seconds when a window is resized
+
+```puppet
+class { 'osx::windows::animations':
+  enabled => true,
+  resize_duration => 4,
+}
+```
+
 ## Airdrop
 
 ```puppet
