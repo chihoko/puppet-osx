@@ -1,14 +1,13 @@
 require 'spec_helper'
 
 describe 'osx::system::recovery_message' do
+  let(:title) { 'If this Mac is found, please call me' }
   describe 'defaults' do
-    let(:title) { 'If this Mac is found, please call me' }
-
     it { should contain_property_list_key('Set OS X Recovery Message').with(
       :ensure => 'present',
       :path   => '/Library/Preferences/com.apple.loginwindow.plist',
       :key    => 'LoginwindowText',
-      :value  => title
+      :value  => 'osx::system::recovery_message'
     )}
   end
 
