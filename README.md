@@ -5,14 +5,6 @@
 Provides classes for setting various defaults in Mac OS X. Also provides a means
 to set a "recovery message" to be displayed on the login and lock screens.
 
-## Recovery Message Usage
-
-Displays the given message on the lock and login screens.
-
-```puppet
-osx::recovery_message { 'If this Mac is found, please call 123-456-7890': }
-```
-
 ## Dashboard
 
 `osx::dashboard` - enable dashboard
@@ -789,6 +781,15 @@ class { 'osx::system::host_name':
 ```puppet
 class { 'osx::system::restart_on_hang':
   enabled => true,
+}
+```
+
+`osx::system::recovery_message` - set the system recovery message
+
+```puppet
+class { 'osx::system::recovery_message':
+  enabled => true,
+  value => 'message',
 }
 ```
 
