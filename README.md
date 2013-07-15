@@ -43,6 +43,16 @@ class { 'osx::firewall
 }
 ```
 
+## Gatekeeper
+
+`osx::gatekeeper` - toggles gatekeeper
+
+```puppet
+class { 'osx::gatekeeper
+  enabled => true,
+}
+```
+
 ## One-Shot Settings
 
 Just `include` any of these in your manifest.
