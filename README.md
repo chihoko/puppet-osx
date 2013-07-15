@@ -904,8 +904,7 @@ class { 'osx::universal_access::flash_screen':
 }
 ```
 
-* `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the
-  scroll wheel
+`osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the scroll wheel
 
 ## Airdrop
 
