@@ -756,6 +756,16 @@ class { 'osx::time_machine::unsupported_network_volumes':
 }
 ```
 
+### Touchpad
+
+`osx::touchpad::gestures::app_expose` - toggle swipe for app expose
+
+```puppet
+class { 'osx::touchpad::gestures::app_expose':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
