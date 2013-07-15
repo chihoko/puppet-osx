@@ -23,6 +23,16 @@ class { 'osx::dashboard':
 }
 ```
 
+## Debug Mode
+
+`osx::debug_mode` - toggles various debug modes
+
+```puppet
+class { 'osx::debug_mode':
+  enabled => true,
+}
+```
+
 ## One-Shot Settings
 
 Just `include` any of these in your manifest.
