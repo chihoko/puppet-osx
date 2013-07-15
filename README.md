@@ -788,6 +788,14 @@ class { 'osx::touchpad::gestures::four_finger_vertical_swipe':
 }
 ```
 
+`osx::touchpad::gestures::launchpad` - toggle pinch with thumb and thee fingers for launchpad
+
+```puppet
+class { 'osx::touchpad::gestures::launchpad':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
