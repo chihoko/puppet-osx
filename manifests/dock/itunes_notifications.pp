@@ -1,4 +1,4 @@
-class osx::dock::itunes_notificaitons($enabled) {
+class osx::dock::itunes_notifications($enabled) {
   include osx::dock
 
   boxen::osx_defaults { 'Display iTunes Notifications on the Dock':
