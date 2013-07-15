@@ -84,6 +84,19 @@ class { 'osx::hot_corners
 }
 ```
 
+## Screen Capture
+
+`osx::screen_capture` - set screen capture settings
+
+```puppet
+class { 'osx::screen_capture
+  format     => 'jpg',
+  location   => '/tmp',
+  add_shadow => false,
+  base_name  => 'screencap_',
+}
+```
+
 ## One-Shot Settings
 
 Just `include` any of these in your manifest.
