@@ -53,6 +53,37 @@ class { 'osx::gatekeeper
 }
 ```
 
+## Hot Corners
+
+`osx::hot_corners` - set actions to hot corners:
+
+Corners:
+
+* 'bottom left'
+* 'bottom right'
+* 'top right'
+* 'top left'
+
+Actions:
+
+* 'do nothing'
+* 'mission control'
+* 'show application windows'
+* 'desktop'
+* 'start screensaver'
+* 'disable screensaver'
+* 'dashboard'
+* 'sleep display'
+* 'launchpad'
+* 'notification center'
+
+```puppet
+class { 'osx::hot_corners
+  corner => 'bottom left',
+  action => 'mission control',
+}
+```
+
 ## One-Shot Settings
 
 Just `include` any of these in your manifest.
