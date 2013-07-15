@@ -13,6 +13,16 @@ Displays the given message on the lock and login screens.
 osx::recovery_message { 'If this Mac is found, please call 123-456-7890': }
 ```
 
+## Dashboard
+
+`osx::dashboard` - enable dashboard
+
+```puppet
+class { 'osx::dashboard':
+  enabled => false,
+}
+```
+
 ## One-Shot Settings
 
 Just `include` any of these in your manifest.
