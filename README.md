@@ -796,6 +796,14 @@ class { 'osx::touchpad::gestures::launchpad':
 }
 ```
 
+`osx::touchpad::gestures::page_swiping` - toggle swipe to switch pages
+
+```puppet
+class { 'osx::touchpad::gestures::page_swiping':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
