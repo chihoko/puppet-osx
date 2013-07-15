@@ -828,6 +828,17 @@ class { 'osx::touchpad::gestures::tap_to_drag':
 }
 ```
 
+`osx::touchpad::gestures::three_finger_horizontal_swipe` - set the effect for swiping left/right with three fingers
+
+* 'switch pages'
+* 'switch apps'
+
+```puppet
+class { 'osx::touchpad::gestures::three_finger_horizontal_swipe':
+  effect => 'switch pages',
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
