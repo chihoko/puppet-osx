@@ -812,6 +812,14 @@ class { 'osx::touchpad::gestures::secondary_click':
 }
 ```
 
+`osx::touchpad::gestures::tap_to_click` - toggle touchpad tap to click
+
+```puppet
+class { 'osx::touchpad::gestures::tap_to_click':
+  enabled => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
