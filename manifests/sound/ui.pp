@@ -3,8 +3,8 @@ class osx::sound::ui(
   $enabled = undef) {
 
   case $enabled {
-    true:  { $enable_int = 1 }
-    false: { $enable_int = 0 }
+    true:  { $enabled_int = 1 }
+    false: { $enabled_int = 0 }
   }
 
   if $enabled_int != undef {
