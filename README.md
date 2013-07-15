@@ -839,6 +839,17 @@ class { 'osx::touchpad::gestures::three_finger_horizontal_swipe':
 }
 ```
 
+`osx::touchpad::gestures::three_finger_vertical_swipe` - set the effect for swiping up/down with three fingers
+
+* 'disabled'
+* 'mission control'
+
+```puppet
+class { 'osx::touchpad::gestures::three_finger_vertical_swipe':
+  effect => 'disabled',
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
