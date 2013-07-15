@@ -880,8 +880,12 @@ class { 'osx::universal_access::assistive_device_access':
 }
 ```
 
-* `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
-  holding Control
+`osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while holding Control
+
+```puppet
+include osx::universal_access::ctrl_mod_zoom
+```
+
 * `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the
   scroll wheel
 
