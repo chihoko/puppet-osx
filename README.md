@@ -896,6 +896,14 @@ class { 'osx::universal_access::cursor_size':
 }
 ```
 
+`osx::universal_access::flash_screen` - toggle screen flashing on alert
+
+```puppet
+class { 'osx::universal_access::flash_screen':
+  enabled => false,
+}
+```
+
 * `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the
   scroll wheel
 
