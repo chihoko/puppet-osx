@@ -859,6 +859,17 @@ class { 'osx::touchpad::movement':
 }
 ```
 
+### Trash
+
+`osx::trash::when_emptying` - toggle empty trash warning and secure trash emptying
+
+```puppet
+class { 'osx::trash::when_emptying':
+  warn   => false,
+  secure => true,
+}
+```
+
 ### Universal Access Settings
 
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
