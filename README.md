@@ -304,7 +304,7 @@ class { 'osx::finder::file_extensions':
 
 ```puppet
 class { 'osx::finder::icon_arrangement':
-  style => 'name'
+  style => 'grid'
 }
 ```
 
