@@ -872,6 +872,14 @@ class { 'osx::trash::when_emptying':
 
 ### Universal Access Settings
 
+`osx::universal_access::assistive_device_access` - toggle assistive device access
+
+```puppet
+class { 'osx::universal_access::assistive_device_access':
+  enabled => true,
+}
+```
+
 * `osx::universal_access::ctrl_mod_zoom` - enables zoom by scrolling while
   holding Control
 * `osx::universal_access::enable_scrollwheel_zoom` - enables zoom using the
