@@ -33,6 +33,16 @@ class { 'osx::debug_mode':
 }
 ```
 
+## Firewall
+
+`osx::firewall` - toggles firewall
+
+```puppet
+class { 'osx::firewall
+  enabled => true,
+}
+```
+
 ## One-Shot Settings
 
 Just `include` any of these in your manifest.
