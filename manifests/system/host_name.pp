@@ -1,4 +1,4 @@
-class osx::system::host_name($name) {
+class osx::system::host_name($name = 'localHost') {
 
   exec { "hostname ${name}":
     unless => "hostname | grep ${name}",
