@@ -1167,8 +1167,10 @@ class { 'osx::time_machine::unsupported_network_volumes':
 `osx::touchpad::gestures::app_expose` - toggle swipe for app expose
 
 ```puppet
+include osx::touchpad::gestures::app_expose
+
 class { 'osx::touchpad::gestures::app_expose':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
