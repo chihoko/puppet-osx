@@ -307,8 +307,10 @@ class { 'osx::dock::indicator_lights':
 `osx::dock::itunes_notifications` - toggle the indicator lights below running applications
 
 ```puppet
+include osx::dock::itunes_notifications
+
 class { 'osx::dock::itunes_notifications':
-  enabled => false
+  ensure => 'present'
 }
 ```
 

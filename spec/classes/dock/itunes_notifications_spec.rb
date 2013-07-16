@@ -4,7 +4,7 @@ describe 'osx::dock::itunes_notifications' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "true"' do
       should include_class('osx::dock')
 
