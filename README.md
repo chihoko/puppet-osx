@@ -20,6 +20,8 @@ class { 'osx::aidrop::all_interfaces':
 `osx::airport::disconnect_on_logout` - disconnect from airport on logout
 
 ```puppet
+include osx::airport::disconnect_on_logout
+
 class { 'osx::airport:disconnect_on_logout':
   enabled => true
 }
