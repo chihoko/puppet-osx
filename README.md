@@ -1117,8 +1117,10 @@ class { 'osx::system::save_documents_to_icloud_by_default':
 `osx::system::save_windows_on_quit` - save windows and positions when restarting/quitting
 
 ```puppet
+include osx::system::save_windows_on_quit
+
 class { 'osx::system::save_windows_on_quit':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
