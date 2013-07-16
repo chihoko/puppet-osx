@@ -1,6 +1,6 @@
 class osx::itunes::automatic_device_backup_when_syncing($ensure = 'present') {
 
-  validate_re($ensure, '^(present|absent)$', "osx::finder::allow_quit([ensure] must be present or absent, is ${ensure}")
+  validate_re($ensure, '^(present|absent)$', "osx::itunes::automatic_device_backup_when_syncing([ensure] must be present or absent, is ${ensure}")
 
   $enabled = $ensure ? {
     present => true,

@@ -1,6 +1,6 @@
 class osx::finder::status_bar($ensure = 'present') {
 
-  validate_re($ensure, '^(present|absent)$', "osx::finder::quicklook_text_selection([ensure] must be present or absent, is ${ensure}")
+  validate_re($ensure, '^(present|absent)$', "osx::finder::status_bar([ensure] must be present or absent, is ${ensure}")
 
   $enabled = $ensure ? {
     present => true,

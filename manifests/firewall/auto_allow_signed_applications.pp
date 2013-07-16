@@ -1,6 +1,6 @@
 class osx::firewall::auto_allow_signed_applications($ensure = 'present') {
 
-  validate_re($ensure, '^(present|absent)$', "osx::finder::allow_quit([ensure] must be present or absent, is ${ensure}")
+  validate_re($ensure, '^(present|absent)$', "osx::firewall::auto_allow_signed_applications([ensure] must be present or absent, is ${ensure}")
 
   $enabled_value = $ensure ? {
     'present' => 'on',

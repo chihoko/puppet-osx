@@ -2,7 +2,7 @@ class osx::finder::springing(
   $ensure = 'present',
   $delay  = undef) {
 
-  validate_re($ensure, '^(present|absent)$', "osx::finder::quicklook_text_selection([ensure] must be present or absent, is ${ensure}")
+  validate_re($ensure, '^(present|absent)$', "osx::finder::springing([ensure] must be present or absent, is ${ensure}")
 
   $enabled = $ensure ? {
     present => true,

@@ -1,7 +1,7 @@
 class osx::firewall::block_all_incoming_connections($ensure = 'present') {
   include osx::firewall::config
 
-  validate_re($ensure, '^(present|absent)$', "osx::finder::allow_quit([ensure] must be present or absent, is ${ensure}")
+  validate_re($ensure, '^(present|absent)$', "osx::firewall::block_all_incoming_connections([ensure] must be present or absent, is ${ensure}")
 
   $enabled_value = $ensure ? {
     present => 'on',
