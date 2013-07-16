@@ -1,10 +1,12 @@
 # TODO: Let the user pass in readable values
 #
-class osx::finder::default_search_scope($scope) {
+class osx::finder::default_search_scope($scope = 'current folder') {
 
-  case $scope {
-    'current folder': { $scope_code = 'SCcf' }
-    default:          { $scope_code = $scope }
+  validate_re($scope, '^(current folder)$', "osx::finder::default_search_scope([scope] must be present or absent, is ${scope}")
+
+  $scope_code = $scope ? {
+    'current folder' => 'SCcf',
+    default          => 'SCcf'
   }
 
   boxen::osx_defaults { 'Set the Default Scope Used When Using The Search Box in Finder':
