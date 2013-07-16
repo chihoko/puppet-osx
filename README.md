@@ -1155,8 +1155,10 @@ class { 'osx::time_machine::local_backups':
 `osx::time_machine::unsupported_network_volumes`
 
 ```puppet
+include osx::time_machine::unsupported_network_volumes
+
 class { 'osx::time_machine::unsupported_network_volumes':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
