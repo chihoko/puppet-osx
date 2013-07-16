@@ -1,8 +1,10 @@
-class osx::displays::auto_brightness_adjustment($enabled) {
+class osx::displays::auto_brightness_adjustment($ensure = 'present') {
 
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+  validate_re($ensure, '^(present|absent)$', "osx::displays::auto_brightness_adjustment([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle Whether Brightness is Automatically Adjusted Depending on Ambient Light':

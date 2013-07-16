@@ -221,8 +221,10 @@ class { 'osx::disk_utility::hidden_partitions':
 `osx::displays::auto_brightness_adjustment` - toggle ambient light-dependent automatic brightness adjustment
 
 ```puppet
+include osx::dialogs::auto_expanding_save_dialog
+
 class { 'osx::displays::auto_brightness_adjustment':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
