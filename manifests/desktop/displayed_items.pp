@@ -7,6 +7,9 @@ class osx::desktop::displayed_items(
   include osx::finder
 
   if $internal_hard_drives != undef {
+
+    validate_bool($internal_hard_drives)
+
     boxen::osx_defaults { 'Show internal drives on the desktop':
       user   => $::boxen_user,
       domain => 'com.apple.finder',
@@ -17,6 +20,9 @@ class osx::desktop::displayed_items(
   }
 
   if $external_hard_drives != undef {
+
+    validate_bool($external_hard_drives)
+
     boxen::osx_defaults { 'Show external drives on the desktop':
       user   => $::boxen_user,
       domain => 'com.apple.finder',
@@ -27,6 +33,9 @@ class osx::desktop::displayed_items(
   }
 
   if $mounted_servers != undef {
+
+    validate_bool($mounted_servers)
+
     boxen::osx_defaults { 'Show mounted servers on the desktop':
       user   => $::boxen_user,
       domain => 'com.apple.finder',
@@ -37,6 +46,9 @@ class osx::desktop::displayed_items(
   }
 
   if $removable_media != undef {
+
+    validate_bool($removable_media)
+
     boxen::osx_defaults { 'Show mounted media on the desktop':
       user   => $::boxen_user,
       domain => 'com.apple.finder',
