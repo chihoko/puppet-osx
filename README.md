@@ -667,8 +667,10 @@ class { 'osx::keyboard::accented_press_and_hold':
 `osx::keyboard::autocorrect` - enable autocorrect
 
 ```puppet
+include osx::keyboard::autocorrect
+
 class { 'osx::keyboard::autocorrect':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
