@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'osx::touchpad::gestures::four_finger_horizontal_swipe' do
   let(:facts) { {:boxen_user => 'ilikebees' } }
   describe('disable') do
-    let(:params) { {:effect => 'disable'} }
+    let(:params) { {:effect => 'disabled'} }
     it 'should set the value to 0' do
       should contain_boxen__osx_defaults('Sets the Effect for Swiping Left/Right with Four Fingers - Part 1').with({
         :user   => facts[:boxen_user],
