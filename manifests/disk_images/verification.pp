@@ -1,8 +1,10 @@
-class osx::disk_images::verification($enabled) {
+class osx::disk_images::verification($ensure = 'present') {
 
-  case $enabled {
-    false:  { $enabled_int = 1 }
-    true:   { $enabled_int = 0 }
+  validate_re($ensure, '^(present|absent)$', "osx::disk_images::verification[ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 0,
+    default => 1
   }
 
   boxen::osx_defaults { 'Toggle the Verification of Disk Images - Part 1':

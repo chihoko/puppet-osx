@@ -187,8 +187,10 @@ class { 'osx::disk_images::auto_mount':
 `osx::disk_images::verification` - set verification of disk images
 
 ```puppet
+include osx::disk_images::verification
+
 class { 'osx::disk_images::verification':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
