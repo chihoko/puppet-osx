@@ -4,7 +4,7 @@ describe 'osx::disk_images::verification' do
   let(:facts) { {:boxen_user => 'ilikebees' } }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'set value to 0' do
       should contain_boxen__osx_defaults('Toggle the Verification of Disk Images - Part 1').with({
         :user   => facts[:boxen_user],
@@ -31,7 +31,7 @@ describe 'osx::disk_images::verification' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'set value to 1' do
       should contain_boxen__osx_defaults('Toggle the Verification of Disk Images - Part 1').with({
         :user   => facts[:boxen_user],
