@@ -1,11 +1,14 @@
 # TODO: Let the user pass in readable values instead of 1, 2, 3, etc.
 # Like 'list', 'icon-grid', etc.
 #
-class osx::dialogs::file_view_mode($mode) {
+class osx::dialogs::file_view_mode($mode = 'list') {
 
-  case $mode {
-    'list':  { $mode_code = 2 }
-    default: { $mode_code = $mode }
+  validate_re($mode, '^(list|icon-grid)$', "osx::dialogs::file_view_mode[mode] must be one of the following: list, icon-grid; is ${mode}")
+
+  $mode_code = $mode ? {
+    icon-grid => 1,
+    list => 2,
+    default => 2,
   }
 
   boxen::osx_defaults { 'File Dialog File View Mode - Part 1':
