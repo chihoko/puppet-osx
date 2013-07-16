@@ -572,8 +572,10 @@ class { 'osx::firewall::block_all_incoming_connections':
 `osx::firewall::logging_mode` - set firewall logging mode
 
 ```puppet
+include osx::firewall::logging_mode
+
 class { 'osx::firewall::logging_mode':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
