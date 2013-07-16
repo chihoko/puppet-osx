@@ -1,13 +1,15 @@
-class osx::system::restart_on_hang($enabled) {
+class osx::system::restart_on_hang($ensure = 'present') {
 
-  case $enabled {
-    true:  { $enabled_text = 'on' }
-    false: { $enabled_text = 'off' }
+  validate_re($ensure, '^(present|absent)$', "osx::finder::allow_quit([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_text = $ensure ? {
+    present => 'on',
+    default => 'off'
   }
 
-  case $enabled {
-    true:  { $enabled_check = 'On' }
-    false: { $enabled_check = 'Off' }
+  $enabled_check = $ensure ? {
+    present => 'On',
+    default => 'Off'
   }
 
   exec { 'Toggles Whether to Restart Automatically if System Hangs':
