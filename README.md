@@ -689,8 +689,10 @@ class { 'osx::keyboard::control_access':
 `osx::keyboard::default_to_alternate_function_keys` - default to "alternate" function keys when not holding the "fn" key
 
 ```puppet
+include osx::keyboard::default_to_alternate_function_keys
+
 class { 'osx::keyboard::default_to_alternate_function_keys':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
