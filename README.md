@@ -521,7 +521,7 @@ class { 'osx::finder::quicklook_text_selection':
 
 ```puppet
 class { 'osx::finder::springing':
-  enabled => true,
+  ensure => 'present'
   delay => 0,
 }
 ```
