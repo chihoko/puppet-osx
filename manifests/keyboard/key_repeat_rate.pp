@@ -11,12 +11,13 @@
 #   class { 'osx::keyboard::key_repeat_rate':
 #     rate => 2
 #   }
-class osx::keyboard::key_repeat_rate($rate) {
-  boxen::osx_defaults { 'key repeat rate':
-    user   => $::boxen_user,
-    domain => 'NSGlobalDomain',
-    key    => 'KeyRepeat',
-    type   => 'float',
-    value  => $rate,
+class osx::keyboard::key_repeat_rate($rate = 10) {
+  if is_integer($rage) {
+    boxen::osx_defaults { 'key repeat rate':
+      user   => $::boxen_user,
+      domain => 'NSGlobalDomain',
+      key    => 'KeyRepeat',
+      value  => $rate,
+    }
   }
 }
