@@ -177,8 +177,10 @@ class { 'osx::dialogs::file_vew_mode':
 `osx::disk_images::auto_mount` - set disk images to auto-mount
 
 ```puppet
+include osx::dialogs::auto_expanding_save_dialog
+
 class { 'osx::disk_images::auto_mount':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
