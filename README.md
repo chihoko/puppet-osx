@@ -157,8 +157,10 @@ class { 'osx::dialogs::auto_expanding_print_dialog':
 `osx::dialogs::auto_expanding_save_dialog` - expand save panel by default
 
 ```puppet
+include osx::dialogs::auto_expanding_save_dialog
+
 class { 'osx::dialogs::auto_expanding_save_dialog':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
