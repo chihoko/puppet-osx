@@ -700,7 +700,7 @@ class { 'osx::keyboard::default_to_alternate_function_keys':
 
 ```puppet
 class { 'osx::keyboard::illumination':
-  enabled => true,
+  ensure => 'present'
   auto_dim => true,
   auto_off_delay => 5,
 }
