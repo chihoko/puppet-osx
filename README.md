@@ -939,8 +939,10 @@ class { 'osx::safari::homepage':
 `osx::safari::thumbnail_cache` - toggle cache for "Top Sites" and "History"
 
 ```puppet
+include osx::safari::thumbnail_cache
+
 class { 'osx::safari::thumbnail_cache':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
