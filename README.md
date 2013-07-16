@@ -582,8 +582,10 @@ class { 'osx::firewall::logging_mode':
 `osx::firewall::stealth_mode` - set whether firewall responds to innocuous requests like PING
 
 ```puppet
+include osx::firewall::stealth_mode
+
 class { 'osx::firewall::stealth_mode':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
