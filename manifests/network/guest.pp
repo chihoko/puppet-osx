@@ -1,4 +1,12 @@
-class osx::network::guest($enabled) {
+class osx::network::guest($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::network::guest([ensure] must be present or absent, is ${ensure}")
+
+  $enabled = $ensure ? {
+    present => true,
+    default => false
+  }
+
   boxen::osx_defaults { 'Toggles Whether to Allow Guest Access to Shared Folders - Part 1':
     user   => root,
     key    => 'guestAccess',
