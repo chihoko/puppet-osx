@@ -328,8 +328,10 @@ class { 'osx::dock::magnification':
 `osx::dock::only_show_running_apps` - only show running applications in the dock
 
 ```puppet
+include osx::dock::only_show_running_apps
+
 class { 'osx::dock::only_show_running_apps':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
