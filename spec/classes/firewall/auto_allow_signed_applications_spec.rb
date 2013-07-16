@@ -4,7 +4,7 @@ describe 'osx::firewall::auto_allow_signed_applications' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "on"' do
       should include_class('osx::firewall::config')
       should contain_exec('Toggles Whether Signed Apps are Automatically Allowed to Accept Incoming Connections').with({
@@ -16,7 +16,7 @@ describe 'osx::firewall::auto_allow_signed_applications' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to "off"' do
       should include_class('osx::firewall::config')
       should contain_exec('Toggles Whether Signed Apps are Automatically Allowed to Accept Incoming Connections').with({
