@@ -324,8 +324,10 @@ include osx::dock::clear
 `osx::dock::autohide` - automatically hide the dock
 
 ```puppet
+include osx::dock::autohide
+
 class { 'osx::dock::autohide':
-  enabled => true,
+  ensure => 'present'
   delay   => 0,
 }
 ```

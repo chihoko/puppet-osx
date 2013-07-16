@@ -1,17 +1,23 @@
 class osx::dock::autohide(
-  $enabled = undef,
+  $ensure = 'present',
   $delay   = undef ) {
 
   include osx::dock
 
-  if $enabled != undef {
-    boxen::osx_defaults { 'Automatically hide the dock':
-      user   => $::boxen_user,
-      key    => 'autohide',
-      domain => 'com.apple.dock',
-      value  => $enabled,
-      notify => Exec['killall Dock'];
-    }
+  validate_re($ensure, '^(present|absent)$', "osx::dock::autohide([ensure] must be present or absent, is ${ensure}")
+
+  $enabled = $ensure ? {
+    present => true,
+    default => false
+  }
+
+
+  boxen::osx_defaults { 'Automatically hide the dock':
+    user   => $::boxen_user,
+    key    => 'autohide',
+    domain => 'com.apple.dock',
+    value  => $enabled,
+    notify => Exec['killall Dock'];
   }
 
   if $delay != undef {
