@@ -8,8 +8,10 @@ to set a "recovery message" to be displayed on the login and lock screens.
 ## Airdrop
 
 ```puppet
+include osx::airdrop::all_interfaces
+
 class { 'osx::aidrop::all_interfaces':
-  allow => true
+  ensure => 'present'
 }
 ```
 
