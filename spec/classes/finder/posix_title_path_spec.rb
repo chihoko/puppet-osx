@@ -4,7 +4,7 @@ describe 'osx::finder::posix_title_path' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "true"' do
       should contain_boxen__osx_defaults('Toggle Whether to Show the Full POSIX Path in the Finder Titlebar').with({
         :domain => 'com.apple.finder',
@@ -16,7 +16,7 @@ describe 'osx::finder::posix_title_path' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to "false"' do
       should contain_boxen__osx_defaults('Toggle Whether to Show the Full POSIX Path in the Finder Titlebar').with({
         :domain => 'com.apple.finder',

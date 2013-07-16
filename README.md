@@ -500,8 +500,10 @@ class { 'osx::finder::path_bar':
 `osx::finder::posix_title_path` - enable full POSIX path in finder title bar
 
 ```puppet
+include osx::finder::posix_title_path
+
 class { 'osx::finder::posix_title_path':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
