@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'osx::security::system_preference_lock' do
-  let(:params) { {:enabled => true} }
+  let(:params) { {:ensure => 'present'} }
   it 'set value to true' do
     should contain_exec("/usr/libexec/plistbuddy -c 'Set :rights:system.preferences:shared true' /etc/authorization").with({
       :command => "/usr/libexec/plistbuddy -c 'Set :rights:system.preferences:shared true' /etc/authorization",

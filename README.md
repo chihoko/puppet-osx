@@ -977,8 +977,10 @@ class { 'osx::screensaver::password_protection':
 `osx::security::system_preference_lock` - lock system preferences
 
 ```puppet
+include osx::security::system_preference_lock
+
 class { 'osx::security::system_preference_lock':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
