@@ -3,13 +3,13 @@ require 'spec_helper'
 describe 'osx::system::crash_reporter' do
   let(:facts) { {:boxen_user => 'ilikebees' } }
   describe('enabled') do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to true' do
       should contain_boxen__osx_defaults('Toggle the Dialog to Sent Usage Statistics to Apple - Part 1').with({
         :user   => facts[:boxen_user],
         :key    => 'DialogType',
         :domain => 'com.apple.CrashReporter',
-        :value  => params[:enabled],
+        :value  => true,
       })
 
       should contain_boxen__osx_defaults('Toggle the Dialog to Sent Usage Statistics to Apple - Part 2').with({
@@ -17,19 +17,19 @@ describe 'osx::system::crash_reporter' do
         :key    => 'AutoSubmit',
         :host   => 'currentHost',
         :domain => 'com.apple.SubmitDiagInfo',
-        :value  => params[:enabled],
+        :value  => true,
       })
     end
   end
 
   describe('disabled') do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to false' do
       should contain_boxen__osx_defaults('Toggle the Dialog to Sent Usage Statistics to Apple - Part 1').with({
         :user   => facts[:boxen_user],
         :key    => 'DialogType',
         :domain => 'com.apple.CrashReporter',
-        :value  => params[:enabled],
+        :value  => false,
       })
 
       should contain_boxen__osx_defaults('Toggle the Dialog to Sent Usage Statistics to Apple - Part 2').with({
@@ -37,7 +37,7 @@ describe 'osx::system::crash_reporter' do
         :key    => 'AutoSubmit',
         :host   => 'currentHost',
         :domain => 'com.apple.SubmitDiagInfo',
-        :value  => params[:enabled],
+        :value  => false,
       })
     end
   end

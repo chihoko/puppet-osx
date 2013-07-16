@@ -1070,8 +1070,10 @@ class { 'osx::system::automatic_app_termination':
 `osx::system::crash_reporter` - send usage statistics to Apple
 
 ```puppet
+include osx::system::crash_reporter
+
 class { 'osx::system::crash_reporter':
-  enable => true,
+  ensure => 'present'
 }
 ```
 
