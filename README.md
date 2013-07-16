@@ -909,8 +909,10 @@ class { 'osx::network::guest':
 `osx::printing::quit_when_finished` - toggle whether the print dialog should disappear when all jobs are complete
 
 ```puppet
+include osx::printing::quit_when_finished
+
 class { 'osx::printing::quit_when_finished':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
