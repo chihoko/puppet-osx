@@ -1145,8 +1145,10 @@ class { 'osx::time_machine::ask_to_use_new_disks_for_backup':
 `osx::time_machine::local_backups`
 
 ```puppet
+include osx::time_machine::local_backups
+
 class { 'osx::time_machine::local_backups':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 

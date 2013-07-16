@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'osx::time_machine::local_backups' do
   let(:facts) { {:boxen_user => 'ilikebees' } }
   describe('enabled') do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to true' do
       should contain_exec('Toggle Whether Local Time Machine Backups are Enabled').with({
         :command => "tmutil enablelocal",
@@ -14,7 +14,7 @@ describe 'osx::time_machine::local_backups' do
   end
 
   describe('disabled') do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to true' do
       should contain_exec('Toggle Whether Local Time Machine Backups are Enabled').with({
         :command => "tmutil disablelocal",

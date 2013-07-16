@@ -1,12 +1,15 @@
-class osx::time_machine::local_backups($enabled) {
-  case $enabled {
-    true:  { $enabled_text = 'enable' }
-    false: { $enabled_text = 'disable' }
+class osx::time_machine::local_backups($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::time_machine::local_backups([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_text = $ensure ? {
+    present => 'enable',
+    default => 'disable'
   }
 
-  case $enabled {
-    true:  { $enabled_check = 'grep -E  "Kind\s+:\s+Local"' }
-    false: { $enabled_check = 'grep -LE "Kind\s+:\s+Local"' }
+  $enabled_check = $ensure ? {
+    present => 'grep -E  "Kind\s+:\s+Local"',
+    default => 'grep -LE "Kind\s+:\s+Local"'
   }
 
   exec { 'Toggle Whether Local Time Machine Backups are Enabled':
