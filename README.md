@@ -1135,8 +1135,10 @@ include osx::system::ui_server
 `osx::time_machine::ask_to_use_new_disks_for_backup`
 
 ```puppet
+include osx::time_machine::ask_to_use_new_disks_for_backup
+
 class { 'osx::time_machine::ask_to_use_new_disks_for_backup':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
