@@ -1,5 +1,4 @@
-class osx::mission_control::animation(
-  $speed) {
+class osx::mission_control::animation($speed = 10) {
 
   boxen::osx_defaults { 'Set the Speed of Transitioning Into and Out of Mission Control':
     user   => $::boxen_user,
