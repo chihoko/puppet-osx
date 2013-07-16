@@ -1,8 +1,11 @@
-class osx::keyboard::control_access($mode) {
-  case $mode {
-    'all_controls_including_dropdowns': { $mode_int = 3 }
-    'all_controls':                     { $mode_int = 2 }
-    'basic':                            { $mode_int = 1 }
+class osx::keyboard::control_access($mode = 'basic') {
+
+  validate_re($mode, '^(basic|all_controls|all_controls_including_dropdowns)$', "osx::keyboard::control_access([ensure] must be one of: basic, all_controls, all_controls_including_dropdowns; is ${mode}")
+
+  $mode_int = $mode ? {
+    'all_controls_including_dropdowns' => 3,
+    'all_controls'                     => 2,
+    default                            => 1,
   }
 
   boxen::osx_defaults { 'Set Keyboard Access for Controls':
