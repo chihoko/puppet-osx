@@ -480,8 +480,10 @@ class { 'osx::finder::icon_arrangement':
 `osx::finder::icon_previews` - enable icon previews in finder
 
 ```puppet
+include osx::finder::icon_previews
+
 class { 'osx::finder::icon_previews':
-  enabled => false
+  ensure => 'present'
 }
 ```
 

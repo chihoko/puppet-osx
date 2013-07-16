@@ -4,7 +4,7 @@ describe 'osx::finder::icon_previews' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should run the list of execs' do
       should contain_exec("/usr/libexec/plistbuddy -c 'Set :FK_StandardViewSettings:IconViewSettings:showIconPreview true' /Users/ilikebees/Library/Preferences/com.apple.finder.plist").with({
         :notify => [
@@ -84,7 +84,7 @@ describe 'osx::finder::icon_previews' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should run the list of execs' do
       should contain_exec("/usr/libexec/plistbuddy -c 'Set :FK_StandardViewSettings:IconViewSettings:showIconPreview false' /Users/ilikebees/Library/Preferences/com.apple.finder.plist").with({
         :notify => [
