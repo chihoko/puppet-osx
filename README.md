@@ -67,8 +67,10 @@ class { 'osx::airport::remember_recent_networks':
 `osx::airport::require_password_for_computer_to_computer_networks` - toggle airport's "Require Password for Computer-to-Computer Networks" preference
 
 ```puppet
+include osx::airport::require_password_for_computer_to_computer_networks
+
 class { 'osx::airport::require_password_for_computer_to_computer_networks':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
