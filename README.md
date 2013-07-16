@@ -490,8 +490,10 @@ class { 'osx::finder::icon_previews':
 `osx::finder::path_bar` - enable path bar in finder
 
 ```puppet
+include osx::finder::path_bar
+
 class { 'osx::finder::path_bar':
-  enabled => false
+  ensure => 'present'
 }
 ```
 
