@@ -1050,8 +1050,10 @@ class { 'osx::system::update::schedule':
 `osx::system::app_quarantine` - toggle the downloaded app quarantine
 
 ```puppet
+include osx::system::app_quarantine
+
 class { 'osx::system::app_quarantine':
-  enable => true,
+  ensure => 'present'
 }
 ```
 
