@@ -846,8 +846,10 @@ class { 'osx::mission_control::animation':
 `osx::mission_control::dashboard_visibility` - toggle visibility of dashboard as a space in mission control
 
 ```puppet
+include osx::mission_control::dashboard_visibility
+
 class { 'osx::mission_control::dashboard_visibility':
-  visible => true
+  ensure => 'present'
 }
 ```
 
