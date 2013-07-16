@@ -756,8 +756,10 @@ class { 'osx::login::auto_login':
 `osx::login::fast_user_switching` - automatically login a user
 
 ```puppet
+include osx::login::fast_user_switching
+
 class { 'osx::login::fast_user_switching':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
