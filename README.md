@@ -736,8 +736,10 @@ include osx::launchpad::reset
 `osx::login::admin_information` - show admin information when clicking the clock on the login screen
 
 ```puppet
+include osx::login::admin_information
+
 class { 'osx::login::admin_information':
-  enabled => true
+  ensure => 'present'
 }
 ```
 

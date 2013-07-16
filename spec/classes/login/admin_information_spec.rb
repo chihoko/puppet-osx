@@ -4,7 +4,7 @@ describe 'osx::login::admin_information' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "Hostname"' do
       should contain_boxen__osx_defaults('Show Admin Information when Clicking the Clock on the Login Screen').with({
         :user   => 'root',
@@ -17,7 +17,7 @@ describe 'osx::login::admin_information' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should remove the resource' do
       should contain_boxen__osx_defaults('Do not Show Admin Information when Clicking the Clock on the Login Screen').with({
         :ensure => 'absent',
