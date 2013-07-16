@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'osx::screensaver::password_protection' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to 1' do
       should contain_boxen__osx_defaults('Toggles Whether or not a Password is Required to Disable the Screensaver').with({
         :user   => facts[:boxen_user],

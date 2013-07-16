@@ -964,8 +964,10 @@ class { 'osx::screen_capture
 `osx::screensaver::password_protection` - set password requirement to disable sreen saver, and delay before screen saver is required
 
 ```puppet
+include osx::screensaver::password_protection
+
 class { 'osx::screensaver::password_protection':
-  enabled => true,
+  ensure => 'present'
   delay => 0,
 }
 ```
