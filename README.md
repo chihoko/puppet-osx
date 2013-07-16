@@ -297,8 +297,10 @@ class { 'osx::dock::icon_size':
 `osx::dock::indicator_lights` - toggle the indicator lights below running applications
 
 ```puppet
+include osx::dock::indicator_lights
+
 class { 'osx::dock::indicator_lights':
-  enabled => false
+  ensure => 'present'
 }
 ```
 
