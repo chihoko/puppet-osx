@@ -1,10 +1,12 @@
 class osx::appearance::sidebar_icons(
   $size = undef) {
 
+    validate_re($size, '^(small|medium|large)$', "osx::appearance::sidebar_icons[size] must be one of the following: small, medium, large; is ${size}")
+
   case $size {
     'small':  { $size_int = 1 }
     'medium': { $size_int = 2 }
-    'large':  { $size_int = 3 }
+    default:  { $size_int = 3 }
   }
 
   if $size != undef {
