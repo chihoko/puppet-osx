@@ -11,12 +11,13 @@
 #   class { 'osx::keyboard::key_repeat_delay':
 #     delay => 10
 #   }
-class osx::keyboard::key_repeat_delay($delay) {
-  boxen::osx_defaults { 'key repeat delay':
-    user   => $::boxen_user,
-    domain => 'NSGlobalDomain',
-    key    => 'InitialKeyRepeat',
-    type   => 'int',
-    value  => $delay,
+class osx::keyboard::key_repeat_delay($delay = 10) {
+  if is_integer($delay) {
+    boxen::osx_defaults { 'key repeat delay':
+      user   => $::boxen_user,
+      domain => 'NSGlobalDomain',
+      key    => 'InitialKeyRepeat',
+      value  => $delay,
+    }
   }
 }
