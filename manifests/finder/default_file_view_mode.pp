@@ -3,12 +3,14 @@
 
 # Values: Nlsv, icnv, clmv, or Flwv
 
-class osx::finder::default_file_view_mode($mode) {
+class osx::finder::default_file_view_mode($mode = 'list') {
   include osx::finder
 
-  case $mode {
-    'list':  { $mode_code = 'Nlsv' }
-    default: { $mode_code = $mode }
+  validate_re($mode, '^(list|icons)$', "osx::finder::default_file_view_mode([mode] must be oneof the following: list, icons; is ${mode}")
+
+  $mode_code = $mode ? {
+    'list'  => 'Nlsv',
+    default => 'Nlsv'
   }
 
   boxen::osx_defaults { 'Set the File View Mode Used By Default When Opening New Finder Windows':
