@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'osx::sound::ui' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
   describe('enabled') do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to 1' do
       should contain_boxen__osx_defaults('Toggle UI Sound Effects').with({
         :user   => facts[:boxen_user],

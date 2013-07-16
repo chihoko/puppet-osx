@@ -997,8 +997,10 @@ class { 'osx::sound::bluetooth':
 `osx::sound::ui` - toggle and set volume for UI sound effects
 
 ```puppet
+include osx::sound::ui
+
 class { 'osx::sound::ui':
-  enable => true,
+  ensure => 'present'
   level => 36,
 }
 ```
