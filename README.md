@@ -147,8 +147,10 @@ class { 'osx::desktop::displayed_items':
 `osx::dialogs::auto_expanding_print_dialog` - expand print panel by default
 
 ```puppet
+include osx::dialogs::auto_expanding_print_dialog
+
 class { 'osx::dialogs::auto_expanding_print_dialog':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
