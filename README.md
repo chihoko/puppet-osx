@@ -1060,8 +1060,10 @@ class { 'osx::system::app_quarantine':
 `osx::system::automatic_app_termination` - toggle whether to automatically quit idle apps
 
 ```puppet
+include osx::system::automatic_app_termination
+
 class { 'osx::system::automatic_app_termination':
-  enable => true,
+  ensure => 'present'
 }
 ```
 
