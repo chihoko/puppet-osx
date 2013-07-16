@@ -1008,8 +1008,10 @@ class { 'osx::sound::ui':
 `osx::sound::volume_feedback` - toggle volume change feedback sound
 
 ```puppet
+include osx::sound::volume_feedback
+
 class { 'osx::sound::volume_feedback':
-  enable => true,
+  ensure => 'present'
 }
 ```
 
