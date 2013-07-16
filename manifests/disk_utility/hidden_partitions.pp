@@ -1,8 +1,10 @@
-class osx::disk_utility::hidden_partitions($visible) {
+class osx::disk_utility::hidden_partitions($ensure = 'present') {
 
-  case $visible {
-    true:  { $visible_int = 1 }
-    false: { $visible_int = 0 }
+  validate_re($ensure, '^(present|absent)$', "osx::disk_images::hidden_partitions([ensure] must be present or absent, is ${ensure}")
+
+  $visible_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle the Visibility of Hidden Partitions in Disk Utility':
