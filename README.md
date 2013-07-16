@@ -57,8 +57,10 @@ class { 'osx::airport::join_mode_fallback':
 `osx::airport::remember_recent_networks` - toggle airport's "Remember Recent Networks" preference
 
 ```puppet
+include osx::airport::remember_recent_networks
+
 class { 'osx::airport::remember_recent_networks':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
