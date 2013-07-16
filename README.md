@@ -766,8 +766,10 @@ class { 'osx::login::fast_user_switching':
 `osx::login::guest` - enable guest account
 
 ```puppet
+include osx::login::guest
+
 class { 'osx::login::guest':
-  enabled => true
+  ensure => 'present'
 }
 ```
 

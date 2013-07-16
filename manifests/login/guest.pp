@@ -1,7 +1,10 @@
-class osx::login::guest($enabled) {
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+class osx::login::guest($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::login::guest([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggles Whether to Allow the Guest Account to Login':
