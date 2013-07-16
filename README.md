@@ -856,8 +856,10 @@ class { 'osx::mission_control::dashboard_visibility':
 `osx::mission_control::group_by_app` - group multiple windows for an app in mission control
 
 ```puppet
+include osx::mission_control::group_by_app
+
 class { 'osx::mission_control::group_by_app':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
