@@ -887,8 +887,10 @@ class { 'osx::network::default_login_name':
 `osx::network::dsstores` - create .DS_Store files on network volumes
 
 ```puppet
+include osx::network::dsstores
+
 class { 'osx::network::dsstores':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
