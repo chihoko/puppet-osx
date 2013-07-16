@@ -921,8 +921,10 @@ class { 'osx::printing::quit_when_finished':
 `osx::safari::find_only_matches_at_beginning_of_word` - toggle whether "Find On Page" matches only the beginnings of words
 
 ```puppet
+include osx::safari::find_only_matches_at_beginning_of_word
+
 class { 'osx::safari::find_only_matches_at_beginning_of_word':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
