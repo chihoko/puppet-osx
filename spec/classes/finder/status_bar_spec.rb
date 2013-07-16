@@ -4,7 +4,7 @@ describe 'osx::finder::status_bar' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "true"' do
       should contain_boxen__osx_defaults('Toggle Whether to Show the Finder Status Bar').with({
         :key    => 'ShowStatusBar',
@@ -17,7 +17,7 @@ describe 'osx::finder::status_bar' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to "false"' do
       should contain_boxen__osx_defaults('Toggle Whether to Show the Finder Status Bar').with({
         :key    => 'ShowStatusBar',

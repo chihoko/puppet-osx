@@ -529,8 +529,10 @@ class { 'osx::finder::springing':
 `osx::finder::status_bar` - display status bar in finder
 
 ```puppet
+include osx::finder::status_bar
+
 class { 'osx::finder::status_bar':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
