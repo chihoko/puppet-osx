@@ -2,7 +2,7 @@ class osx::energy::sleep(
   $on_battery      = undef,
   $when_plugged_in = undef ) {
 
-  if $on_battery != undef {
+  if is_integer($on_battery) {
     exec { 'Set Time Until System Sleeps When on Battery Power':
       command => "pmset -b sleep ${on_battery}",
       user    => root,
@@ -10,7 +10,7 @@ class osx::energy::sleep(
     }
   }
 
-  if $when_plugged_in != undef {
+  if is_integer($when_plugged_in) {
     exec { 'Set Time Until System Sleeps When Plugged In':
       command => "pmset -c sleep ${when_plugged_in}",
       user    => root,
