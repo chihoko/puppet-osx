@@ -1030,8 +1030,10 @@ class { 'osx::system::update::automatic_downloads':
 `osx::system::update::local_cdn` - toggle downloading software updates in the background when available
 
 ```puppet
+include osx::system::update::local_cdn
+
 class { 'osx::system::update::local_cdn':
-  enable => true,
+  ensure => 'present'
 }
 ```
 
