@@ -824,9 +824,12 @@ class { 'osx::menu_bar::date':
 ```
 
 `osx::menu_bar::transparency` - set menu bar transparency
+
 ```puppet
+include osx::finder::status_bar
+
 class { 'osx::menu_bar::transparency':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
