@@ -657,8 +657,10 @@ class { 'osx::itunes::automatic_sync':
 `osx::keyboard::accented_press_and_hold` - press and hold for accented characters
 
 ```puppet
+include osx::keyboard::accented_press_and_hold
+
 class { 'osx::keyboard::accented_press_and_hold':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 

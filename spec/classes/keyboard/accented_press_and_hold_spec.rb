@@ -4,7 +4,7 @@ describe 'osx::keyboard::accented_press_and_hold' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "true"' do
       should contain_boxen__osx_defaults('Press-and-Hold for Accented Characters').with({
         :domain => 'NSGlobalDomain',
@@ -16,7 +16,7 @@ describe 'osx::keyboard::accented_press_and_hold' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to "false"' do
       should contain_boxen__osx_defaults('Press-and-Hold for Accented Characters').with({
         :domain => 'NSGlobalDomain',
