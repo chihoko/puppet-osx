@@ -1107,8 +1107,10 @@ class { 'osx::system::recovery_message':
 `osx::system::save_documents_to_icloud_by_default` - save documents to iCloud by default
 
 ```puppet
+include osx::system::save_documents_to_icloud_by_default
+
 class { 'osx::system::save_documents_to_icloud_by_default':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
