@@ -806,8 +806,10 @@ class { 'osx::login::style':
 `osx::menu_bar::airplay` - show the AirPlay Mirroring icon in the menu bar
 
 ```puppet
+include osx::menu_bar::airplay
+
 class { 'osx::menu_bar::airplay':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
