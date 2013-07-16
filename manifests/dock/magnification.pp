@@ -1,23 +1,23 @@
 class osx::dock::magnification(
-  $enabled             = undef,
+  $ensure              = 'present',
   $magnified_icon_size = undef ) {
 
   include osx::dock
 
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+  validate_re($ensure, '^(present|absent)$', "osx::disk_images::auto_mount([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
-  if $enabled != undef {
-    boxen::osx_defaults { 'Toggles Whether the Icons Magnify as the Cursor Gets Closer':
-      user   => $::boxen_user,
-      key    => 'magnification',
-      domain => 'com.apple.dock',
-      type   => 'int',
-      value  => $enabled_int,
-      notify => Exec['killall Dock'],
-    }
+  boxen::osx_defaults { 'Toggles Whether the Icons Magnify as the Cursor Gets Closer':
+    user   => $::boxen_user,
+    key    => 'magnification',
+    domain => 'com.apple.dock',
+    type   => 'int',
+    value  => $enabled_int,
+    notify => Exec['killall Dock'],
   }
 
   if $magnified_icon_size != undef {

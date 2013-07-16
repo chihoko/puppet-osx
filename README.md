@@ -317,8 +317,10 @@ class { 'osx::dock::itunes_notifications':
 `osx::dock::magnification` - toggles magnification of icons and sets icon magnification size
 
 ```puppet
+include osx::dock::magnification
+
 class { 'osx::dock::magnification':
-  enabled => true,
+  ensure => 'present'
   magnified_icon_size => 48,
 }
 ```
