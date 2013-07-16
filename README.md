@@ -77,8 +77,10 @@ class { 'osx::airport::require_password_for_computer_to_computer_networks':
 `osx::airport::require_password_to_change_networks` - toggle airport's "Require Password to Change Networks" preference
 
 ```puppet
+include osx::airport::require_password_to_change_networks
+
 class { 'osx::airport::require_password_to_change_networks':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
