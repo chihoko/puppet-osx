@@ -409,8 +409,10 @@ class { 'osx::finder::allow_quit':
 `osx::finder::animations` - enable finder animations
 
 ```puppet
+include osx::osx::finder::animations
+
 class { 'osx::finder::animations':
-  enabled => false
+  ensure => 'present'
 }
 ```
 
