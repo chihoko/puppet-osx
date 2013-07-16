@@ -1020,8 +1020,10 @@ class { 'osx::sound::volume_feedback':
 `osx::system::update::automatic_downloads` - toggle downloading software updates in the background when available
 
 ```puppet
+include osx::system::update::automatic_downloads
+
 class { 'osx::system::update::automatic_downloads':
-  enable => true,
+  ensure => 'present'
 }
 ```
 
