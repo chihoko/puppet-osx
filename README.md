@@ -562,8 +562,10 @@ class { 'osx::firewall::auto_allow_signed_applications':
 `osx::firewall::block_all_incoming_connections` - block all non-essential incoming connections
 
 ```puppet
+include osx::firewall::block_all_incoming_connections
+
 class { 'osx::firewall::block_all_incoming_connections':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 

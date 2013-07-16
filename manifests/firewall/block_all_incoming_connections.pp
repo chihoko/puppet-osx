@@ -1,9 +1,11 @@
-class osx::firewall::block_all_incoming_connections($enabled) {
+class osx::firewall::block_all_incoming_connections($ensure = 'present') {
   include osx::firewall::config
 
-  case $enabled {
-    true:  { $enabled_value = 'on' }
-    false: { $enabled_value = 'off' }
+  validate_re($ensure, '^(present|absent)$', "osx::finder::allow_quit([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_value = $ensure ? {
+    present => 'on',
+    default => 'off'
   }
 
   exec { 'Toggle Whether the Firewall Blocks All Non-Essential Incoming Connections':
