@@ -635,8 +635,10 @@ class { 'osx::hot_corners
 `osx::itunes::automatic_device_backup_when_syncing` - set iTunes to automatically back up device on sync
 
 ```puppet
+osx::itunes::automatic_device_backup_when_syncing
+
 class { 'osx::itunes::automatic_device_backup_when_syncing':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
