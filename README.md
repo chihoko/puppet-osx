@@ -270,8 +270,10 @@ include osx::dock::clear
 `osx::dock::hidden_app_dimming` - dims icons of hidden apps
 
 ```puppet
+include osx::dock::hidden_app_dimming
+
 class { 'osx::dock::hidden_app_dimming':
-  enabled => true
+  ensure => 'present'
 }
 ```
 
