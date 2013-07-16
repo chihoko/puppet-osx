@@ -645,8 +645,10 @@ class { 'osx::itunes::automatic_device_backup_when_syncing':
 `osx::itunes::automatic_sync` - set iTunes to automatically sync devices when connected
 
 ```puppet
+include osx::itunes::automatic_sync
+
 class { 'osx::itunes::automatic_sync':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 

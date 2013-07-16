@@ -4,7 +4,7 @@ describe 'osx::itunes::automatic_sync' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "false"' do
       should contain_boxen__osx_defaults('Toggle Whether iPods and iPhones Sync Automatically When Connected').with({
         :key    => 'dontAutomaticallySyncIPods',
@@ -16,7 +16,7 @@ describe 'osx::itunes::automatic_sync' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to "true"' do
       should contain_boxen__osx_defaults('Toggle Whether iPods and iPhones Sync Automatically When Connected').with({
         :key    => 'dontAutomaticallySyncIPods',
