@@ -14,25 +14,25 @@ describe 'osx::universal_access::scrollwheel_zoom' do
   end
 
   describe 'enabled with param' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set value to true' do
       should contain_boxen__osx_defaults('Use mouse wheel (scroll gesture) to zoom').with({
         :user   => facts[:boxen_user],
         :domain => 'com.apple.universalaccess',
         :key    => 'closeViewScrollWheelToggle',
-        :value  => params[:enabled],
+        :value  => true,
       })
     end
   end
 
   describe 'disabled with param' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set value to false' do
       should contain_boxen__osx_defaults('Use mouse wheel (scroll gesture) to zoom').with({
         :user   => facts[:boxen_user],
         :domain => 'com.apple.universalaccess',
         :key    => 'closeViewScrollWheelToggle',
-        :value  => params[:enabled],
+        :value  => false,
       })
     end
   end
