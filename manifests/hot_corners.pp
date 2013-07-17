@@ -1,7 +1,7 @@
 class osx::hot_corners(
   $only_with_modifier = false,
-  $corner,
-  $action) {
+  $corner = 'bottom left',
+  $action = 'do nothing') {
 
   case $corner {
     'bottom left':   { $corner_abbreviation = 'bl' }

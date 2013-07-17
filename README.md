@@ -632,7 +632,7 @@ Actions:
 * 'notification center'
 
 ```puppet
-class { 'osx::hot_corners
+class { 'osx::hot_corners':
   corner => 'bottom left',
   action => 'mission control',
 }
