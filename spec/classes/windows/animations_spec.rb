@@ -3,13 +3,13 @@ require 'spec_helper'
 describe 'osx::windows::animations' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set value to true' do
       should contain_boxen__osx_defaults('Toggle Open/Close Window Animations').with({
         :user   => facts[:boxen_user],
         :key    => 'NSAutomaticWindowAnimationsEnabled',
         :domain => 'NSGlobalDomain',
-        :value  => params[:enabled],
+        :value  => true,
       })
     end
   end
