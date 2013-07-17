@@ -146,8 +146,10 @@ class { 'osx::dashboard':
 `osx::debug_mode` - toggles various debug modes
 
 ```puppet
+include osx::debug_mode
+
 class { 'osx::debug_mode':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 

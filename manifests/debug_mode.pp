@@ -1,4 +1,12 @@
-class osx::debug_mode($enabled) {
+class osx::debug_mode($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::debug_mode([ensure] must be present or absent, is ${ensure}")
+
+  $enabled = $ensure ? {
+    present => true,
+    default => false
+  }
+
   boxen::osx_defaults { 'Toggle Disk Utility Debug Mode':
     user   => $::boxen_user,
     key    => 'DUDebugMenuEnabled',
