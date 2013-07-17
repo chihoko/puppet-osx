@@ -15,7 +15,3 @@ class osx::universal_access::scrollwheel_zoom($ensure = 'absent') {
     value  => $enabled,
   }
 }
-
-class osx::universal_access::enable_scrollwheel_zoom {
-  include osx::universal_access::scrollwheel_zoom
-}
