@@ -134,8 +134,10 @@ class { 'osx::appearance::sidebar_icons':
 `osx::dashboard` - enable dashboard
 
 ```puppet
+include osx::dashboard
+
 class { 'osx::dashboard':
-  enabled => false,
+  ensure => 'present'
 }
 ```
 
