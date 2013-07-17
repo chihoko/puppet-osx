@@ -5,17 +5,17 @@ class osx::system::host_name($name = 'localHost') {
     user   => root,
   }
 
-  exec { "scutil --set ComputerName $name":
+  exec { "scutil --set ComputerName ${name}":
     unless => "scutil --get ComputerName | grep ${name}",
     user   => root,
   }
 
-  exec { "scutil --set HostName $name":
+  exec { "scutil --set HostName ${name}":
     unless => "scutil --get HostName | grep ${name}",
     user   => root,
   }
 
-  exec { "scutil --set LocalHostName $name":
+  exec { "scutil --set LocalHostName ${name}":
     unless => "scutil --get LocalHostName | grep ${name}",
     user   => root,
   }
