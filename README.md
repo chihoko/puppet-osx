@@ -1349,9 +1349,11 @@ class { 'osx::windows::miniaturize_on_double_click':
 }
 ```
 
-`osx::windows::scroll_bars` - set the scrollbar ode
+`osx::windows::scroll_bars` - set the scrollbar mode
 
 ```puppet
+include osx::windows::scroll_bars
+
 class { 'osx::windows::scroll_bars':
   style => "Automatic"
 }
