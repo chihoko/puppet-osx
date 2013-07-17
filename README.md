@@ -1209,8 +1209,10 @@ class { 'osx::touchpad::gestures::launchpad':
 `osx::touchpad::gestures::page_swiping` - toggle swipe to switch pages
 
 ```puppet
+include osx::touchpad::gestures::page_swiping
+
 class { 'osx::touchpad::gestures::page_swiping':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 

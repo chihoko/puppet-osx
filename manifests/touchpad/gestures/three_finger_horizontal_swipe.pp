@@ -1,14 +1,14 @@
-class osx::touchpad::gestures::three_finger_horizontal_swipe($effect) {
+class osx::touchpad::gestures::three_finger_horizontal_swipe($effect = 'switch pages') {
 
-  case $effect {
-    'switch pages': { $effect_int = 1 }
-    'switch apps':  { $effect_int = 2 }
+  validate_re($effect, '^(switch pages|switch apps)$', "osx::touchpad::gestures::three_finger_horizontal_swipe([effect] must be switch pages or switch apps, is ${effect}")
+
+  $effect_int = $effect ? {
+    'switch pages' => 1,
+    default        => 2
   }
 
   if $effect_int == 1 {
-    class { 'osx::touchpad::gestures::page_swiping':
-      enabled => true,
-    }
+    include osx::touchpad::gestures::page_swiping
   }
 
   boxen::osx_defaults { 'Sets the Effect for Swiping Left/Right with Three Fingers - Part 1':
