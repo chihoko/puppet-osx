@@ -1219,24 +1219,30 @@ class { 'osx::touchpad::gestures::page_swiping':
 `osx::touchpad::gestures::secondary_click` - toggle secondary 'right click' on internal toucpad, external touchpad, and magic mouse
 
 ```puppet
+include osx::touchpad::gestures::secondary_click
+
 class { 'osx::touchpad::gestures::secondary_click':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
 `osx::touchpad::gestures::tap_to_click` - toggle touchpad tap to click
 
 ```puppet
+include osx::touchpad::gestures::tap_to_click
+
 class { 'osx::touchpad::gestures::tap_to_click':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
 `osx::touchpad::gestures::tap_to_drag` - toggle touchpad tap to drag
 
 ```puppet
+include osx::touchpad::gestures::tap_to_drag
+
 class { 'osx::touchpad::gestures::tap_to_drag':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
