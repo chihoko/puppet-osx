@@ -1342,8 +1342,10 @@ class { 'osx::windows::animations':
 `osx::windows::miniaturize_on_double_click` - miniaturize windows on double-click
 
 ```puppet
+include osx::windows::miniaturize_on_double_click
+
 class { 'osx::windows::miniaturize_on_double_click':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 

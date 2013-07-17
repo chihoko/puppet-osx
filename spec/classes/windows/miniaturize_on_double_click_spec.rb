@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'osx::windows::miniaturize_on_double_click' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
   describe 'enabled' do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set value to 1' do
       should contain_boxen__osx_defaults('Miniaturize Windows on Double-Click').with({
         :user   => facts[:boxen_user],
@@ -16,7 +16,7 @@ describe 'osx::windows::miniaturize_on_double_click' do
   end
 
   describe 'disabled' do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set value to 0' do
       should contain_boxen__osx_defaults('Miniaturize Windows on Double-Click').with({
         :user   => facts[:boxen_user],
