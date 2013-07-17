@@ -1,15 +1,18 @@
-class osx::firewall($enabled) {
+class osx::firewall($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::firewall([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_value = $ensure ? {
+    present => 'on',
+    default => 'off'
+  }
+
+  $enabled_check = $ensure ? {
+    present => 'enabled',
+    default => 'disabled'
+  }
+
   include osx::firewall::config
-
-  case $enabled {
-    true:  { $enabled_value = 'on' }
-    false: { $enabled_value = 'off' }
-  }
-
-  case $enabled {
-    true:  { $enabled_check = 'enabled' }
-    false: { $enabled_check = 'disabled' }
-  }
 
   exec { 'Toggles Whether the Firewall is Enabled':
     command => "${osx::firewall::config::path_to_binary} --setglobalstate ${enabled_value}",

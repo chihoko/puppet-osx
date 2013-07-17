@@ -548,8 +548,10 @@ class { 'osx::finder::status_bar':
 `osx::firewall` - toggles firewall
 
 ```puppet
-class { 'osx::firewall
-  enabled => true,
+include osx::firewall
+
+class { 'osx::firewall':
+  ensure => 'present'
 }
 ```
 
