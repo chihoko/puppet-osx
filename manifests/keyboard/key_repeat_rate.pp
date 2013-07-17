@@ -12,7 +12,7 @@
 #     rate => 2
 #   }
 class osx::keyboard::key_repeat_rate($rate = 10) {
-  if is_integer($rage) {
+  if is_integer($rate) {
     boxen::osx_defaults { 'key repeat rate':
       user   => $::boxen_user,
       domain => 'NSGlobalDomain',
