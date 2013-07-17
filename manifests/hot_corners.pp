@@ -38,7 +38,7 @@ class osx::hot_corners(
     value  => $action_int,
   }
 
-  boxen::osx_defaults { "Set the modifier for the ${corner} hot corner to ${modifier}":
+  boxen::osx_defaults { "Set the modifier for the ${corner} hot corner to ${only_with_modifier}":
     user   => $::boxen_user,
     key    => "wvous-${corner_abbreviation}-modifier",
     domain => 'com.apple.dock',
