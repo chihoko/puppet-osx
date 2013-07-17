@@ -4,7 +4,9 @@ class osx::screen_capture(
   $add_shadow = undef,
   $base_name  = undef) {
 
+
   if $format != undef {
+    validate_re($format, '^(jpg)$', "osx::screen_capture([format] must be jpg, is ${format}")
     boxen::osx_defaults { 'Sets the Format of Images Taken With Screen Capture':
       user   => $::boxen_user,
       key    => 'type',
@@ -23,6 +25,7 @@ class osx::screen_capture(
   }
 
   if $add_shadow != undef {
+    validate_bool($add_shadow)
     boxen::osx_defaults { 'Toggles Whether Images Taken With Screen Capture Include Drop Shadows':
       user   => $::boxen_user,
       key    => 'disable-shadow',

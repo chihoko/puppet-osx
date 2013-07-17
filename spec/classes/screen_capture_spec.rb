@@ -3,8 +3,8 @@ require 'spec_helper'
 describe 'osx::screen_capture' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
   describe 'format' do
-    let(:params) { {:format => 'some_format'} }
-    it 'should set value to "some_format"' do
+    let(:params) { {:format => 'jpg'} }
+    it 'should set value to "jpg"' do
       should contain_boxen__osx_defaults('Sets the Format of Images Taken With Screen Capture').with({
         :user   => facts[:boxen_user],
         :key    => 'type',
