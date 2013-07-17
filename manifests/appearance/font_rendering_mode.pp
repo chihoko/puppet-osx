@@ -2,7 +2,7 @@
 #
 # Mode 2 enables subpixel font rendering on non-Apple LCDs
 #
-class osx::appearance::font_rendering_mode($mode) {
+class osx::appearance::font_rendering_mode($mode = 1) {
 
   if member([1, 2, 3], $mode) {
     boxen::osx_defaults { 'Change the Rendering Mode Used to Display Text':

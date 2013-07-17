@@ -1,4 +1,4 @@
-class osx::finder::animations($ensure) {
+class osx::finder::animations($ensure = 'present') {
 
   validate_re($ensure, '^(present|absent)$', "osx::finder::animations([ensure] must be present or absent, is ${ensure}")
 
