@@ -26,8 +26,8 @@ class osx::hot_corners(
   }
 
   case $only_with_modifier {
-    true:  { $modifier_int = 1 }
-    false: { $modifier_int = 0 }
+    true:    { $modifier_int = 1 }
+    default: { $modifier_int = 0 }
   }
 
   boxen::osx_defaults { "Set the ${corner} hot corner to ${action}":
