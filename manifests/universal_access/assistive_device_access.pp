@@ -7,6 +7,6 @@ class osx::universal_access::assistive_device_access($ensure = 'present') {
     content => 'a',
     owner   => root,
     group   => 'wheel',
-    mode    => 0444,
+    mode    => '0444',
   }
 }
