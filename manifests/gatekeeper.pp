@@ -1,8 +1,10 @@
-class osx::gatekeeper($enabled) {
+class osx::gatekeeper($ensure = 'present') {
 
-  case $enabled {
-    true:  { $enabled_text = 'enable' }
-    false: { $enabled_text = 'disable' }
+  validate_re($ensure, '^(present|absent)$', "osx::gatekeeper([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_text = $ensure ? {
+    present => 'enable',
+    default => 'disable'
   }
 
   exec { 'Toggles Whether to Restart Automatically if System Hangs':

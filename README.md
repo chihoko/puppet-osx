@@ -600,8 +600,10 @@ class { 'osx::firewall::stealth_mode':
 `osx::gatekeeper` - toggles gatekeeper
 
 ```puppet
-class { 'osx::gatekeeper
-  enabled => true,
+include osx::gatekeeper
+
+class { 'osx::gatekeeper':
+  ensure => 'present'
 }
 ```
 
