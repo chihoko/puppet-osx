@@ -11,7 +11,7 @@ to set a "recovery message" to be displayed on the login and lock screens.
 include osx::airdrop::all_interfaces
 
 class { 'osx::aidrop::all_interfaces':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -60,7 +60,7 @@ class { 'osx::airport::join_mode_fallback':
 include osx::airport::remember_recent_networks
 
 class { 'osx::airport::remember_recent_networks':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -70,7 +70,7 @@ class { 'osx::airport::remember_recent_networks':
 include osx::airport::require_password_for_computer_to_computer_networks
 
 class { 'osx::airport::require_password_for_computer_to_computer_networks':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -80,7 +80,7 @@ class { 'osx::airport::require_password_for_computer_to_computer_networks':
 include osx::airport::require_password_to_change_networks
 
 class { 'osx::airport::require_password_to_change_networks':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -90,7 +90,7 @@ class { 'osx::airport::require_password_to_change_networks':
 include osx::airport::require_password_to_toggle_power
 
 class { 'osx::airport::require_password_to_toggle_power':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -137,7 +137,7 @@ class { 'osx::appearance::sidebar_icons':
 include osx::dashboard
 
 class { 'osx::dashboard':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -149,7 +149,7 @@ class { 'osx::dashboard':
 include osx::debug_mode
 
 class { 'osx::debug_mode':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -174,7 +174,7 @@ class { 'osx::desktop::displayed_items':
 include osx::dialogs::auto_expanding_print_dialog
 
 class { 'osx::dialogs::auto_expanding_print_dialog':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -184,7 +184,7 @@ class { 'osx::dialogs::auto_expanding_print_dialog':
 include osx::dialogs::auto_expanding_save_dialog
 
 class { 'osx::dialogs::auto_expanding_save_dialog':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -204,7 +204,7 @@ class { 'osx::dialogs::file_vew_mode':
 include osx::dialogs::auto_expanding_save_dialog
 
 class { 'osx::disk_images::auto_mount':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -214,7 +214,7 @@ class { 'osx::disk_images::auto_mount':
 include osx::disk_images::verification
 
 class { 'osx::disk_images::verification':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -226,7 +226,7 @@ class { 'osx::disk_images::verification':
 include osx::disk_utility::advanced_image_options
 
 class { 'osx::disk_utility::advanced_image_options':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -236,7 +236,7 @@ class { 'osx::disk_utility::advanced_image_options':
 include osx::disk_utility::hidden_partitions
 
 class { 'osx::disk_utility::hidden_partitions':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -248,7 +248,7 @@ class { 'osx::disk_utility::hidden_partitions':
 include osx::dialogs::auto_expanding_save_dialog
 
 class { 'osx::displays::auto_brightness_adjustment':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -260,7 +260,7 @@ class { 'osx::displays::auto_brightness_adjustment':
 include osx::dock::autohide
 
 class { 'osx::dock::autohide':
-  ensure => 'present'
+  ensure => 'present',
   delay   => 0,
 }
 ```
@@ -277,7 +277,7 @@ include osx::dock::clear
 include osx::dock::hidden_app_dimming
 
 class { 'osx::dock::hidden_app_dimming':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -304,7 +304,7 @@ class { 'osx::dock::icon_size':
 include osx::dock::indicator_lights
 
 class { 'osx::dock::indicator_lights':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -314,7 +314,7 @@ class { 'osx::dock::indicator_lights':
 include osx::dock::itunes_notifications
 
 class { 'osx::dock::itunes_notifications':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -324,7 +324,7 @@ class { 'osx::dock::itunes_notifications':
 include osx::dock::magnification
 
 class { 'osx::dock::magnification':
-  ensure => 'present'
+  ensure => 'present',
   magnified_icon_size => 48,
 }
 ```
@@ -335,7 +335,7 @@ class { 'osx::dock::magnification':
 include osx::dock::only_show_running_apps
 
 class { 'osx::dock::only_show_running_apps':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -406,7 +406,7 @@ class { 'osx::energy::sleep':
 include osx::finder::allow_quit
 
 class { 'osx::finder::allow_quit':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -416,7 +416,7 @@ class { 'osx::finder::allow_quit':
 include osx::osx::finder::animations
 
 class { 'osx::finder::animations':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -487,7 +487,7 @@ class { 'osx::finder::icon_arrangement':
 include osx::finder::icon_previews
 
 class { 'osx::finder::icon_previews':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -497,7 +497,7 @@ class { 'osx::finder::icon_previews':
 include osx::finder::path_bar
 
 class { 'osx::finder::path_bar':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -507,7 +507,7 @@ class { 'osx::finder::path_bar':
 include osx::finder::posix_title_path
 
 class { 'osx::finder::posix_title_path':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -517,7 +517,7 @@ class { 'osx::finder::posix_title_path':
 include osx::finder::quicklook_text_selection
 
 class { 'osx::finder::quicklook_text_selection':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -525,7 +525,7 @@ class { 'osx::finder::quicklook_text_selection':
 
 ```puppet
 class { 'osx::finder::springing':
-  ensure => 'present'
+  ensure => 'present',
   delay => 0,
 }
 ```
@@ -536,7 +536,7 @@ class { 'osx::finder::springing':
 include osx::finder::status_bar
 
 class { 'osx::finder::status_bar':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -551,7 +551,7 @@ class { 'osx::finder::status_bar':
 include osx::firewall
 
 class { 'osx::firewall':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -561,7 +561,7 @@ class { 'osx::firewall':
 include osx::firewall::auto_allow_signed_applications
 
 class { 'osx::firewall::auto_allow_signed_applications':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -571,7 +571,7 @@ class { 'osx::firewall::auto_allow_signed_applications':
 include osx::firewall::block_all_incoming_connections
 
 class { 'osx::firewall::block_all_incoming_connections':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -581,7 +581,7 @@ class { 'osx::firewall::block_all_incoming_connections':
 include osx::firewall::logging_mode
 
 class { 'osx::firewall::logging_mode':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -591,7 +591,7 @@ class { 'osx::firewall::logging_mode':
 include osx::firewall::stealth_mode
 
 class { 'osx::firewall::stealth_mode':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -603,7 +603,7 @@ class { 'osx::firewall::stealth_mode':
 include osx::gatekeeper
 
 class { 'osx::gatekeeper':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -646,7 +646,7 @@ class { 'osx::hot_corners':
 osx::itunes::automatic_device_backup_when_syncing
 
 class { 'osx::itunes::automatic_device_backup_when_syncing':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -656,7 +656,7 @@ class { 'osx::itunes::automatic_device_backup_when_syncing':
 include osx::itunes::automatic_sync
 
 class { 'osx::itunes::automatic_sync':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -668,7 +668,7 @@ class { 'osx::itunes::automatic_sync':
 include osx::keyboard::accented_press_and_hold
 
 class { 'osx::keyboard::accented_press_and_hold':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -678,7 +678,7 @@ class { 'osx::keyboard::accented_press_and_hold':
 include osx::keyboard::autocorrect
 
 class { 'osx::keyboard::autocorrect':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -700,7 +700,7 @@ class { 'osx::keyboard::control_access':
 include osx::keyboard::default_to_alternate_function_keys
 
 class { 'osx::keyboard::default_to_alternate_function_keys':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -708,7 +708,7 @@ class { 'osx::keyboard::default_to_alternate_function_keys':
 
 ```puppet
 class { 'osx::keyboard::illumination':
-  ensure => 'present'
+  ensure => 'present',
   auto_dim => true,
   auto_off_delay => 5,
 }
@@ -747,7 +747,7 @@ include osx::launchpad::reset
 include osx::login::admin_information
 
 class { 'osx::login::admin_information':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -757,7 +757,7 @@ class { 'osx::login::admin_information':
 include osx::login::auto_login
 
 class { 'osx::login::auto_login':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -767,7 +767,7 @@ class { 'osx::login::auto_login':
 include osx::login::fast_user_switching
 
 class { 'osx::login::fast_user_switching':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -777,7 +777,7 @@ class { 'osx::login::fast_user_switching':
 include osx::login::guest
 
 class { 'osx::login::guest':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -787,7 +787,7 @@ class { 'osx::login::guest':
 include osx::login::power_options
 
 class { 'osx::login::power_options':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -817,7 +817,7 @@ class { 'osx::login::style':
 include osx::menu_bar::airplay
 
 class { 'osx::menu_bar::airplay':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -837,7 +837,7 @@ class { 'osx::menu_bar::date':
 include osx::finder::status_bar
 
 class { 'osx::menu_bar::transparency':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -857,7 +857,7 @@ class { 'osx::mission_control::animation':
 include osx::mission_control::dashboard_visibility
 
 class { 'osx::mission_control::dashboard_visibility':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -867,7 +867,7 @@ class { 'osx::mission_control::dashboard_visibility':
 include osx::mission_control::group_by_app
 
 class { 'osx::mission_control::group_by_app':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -898,7 +898,7 @@ class { 'osx::network::default_login_name':
 include osx::network::dsstores
 
 class { 'osx::network::dsstores':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -908,7 +908,7 @@ class { 'osx::network::dsstores':
 include osx::network::guest
 
 class { 'osx::network::guest':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -920,7 +920,7 @@ class { 'osx::network::guest':
 include osx::printing::quit_when_finished
 
 class { 'osx::printing::quit_when_finished':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -932,7 +932,7 @@ class { 'osx::printing::quit_when_finished':
 include osx::safari::find_only_matches_at_beginning_of_word
 
 class { 'osx::safari::find_only_matches_at_beginning_of_word':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -950,7 +950,7 @@ class { 'osx::safari::homepage':
 include osx::safari::thumbnail_cache
 
 class { 'osx::safari::thumbnail_cache':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -975,7 +975,7 @@ class { 'osx::screen_capture
 include osx::screensaver::password_protection
 
 class { 'osx::screensaver::password_protection':
-  ensure => 'present'
+  ensure => 'present',
   delay => 0,
 }
 ```
@@ -988,7 +988,7 @@ class { 'osx::screensaver::password_protection':
 include osx::security::system_preference_lock
 
 class { 'osx::security::system_preference_lock':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1008,7 +1008,7 @@ class { 'osx::sound::bluetooth':
 include osx::sound::ui
 
 class { 'osx::sound::ui':
-  ensure => 'present'
+  ensure => 'present',
   level => 36,
 }
 ```
@@ -1019,7 +1019,7 @@ class { 'osx::sound::ui':
 include osx::sound::volume_feedback
 
 class { 'osx::sound::volume_feedback':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1031,7 +1031,7 @@ class { 'osx::sound::volume_feedback':
 include osx::system::update::automatic_downloads
 
 class { 'osx::system::update::automatic_downloads':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1041,7 +1041,7 @@ class { 'osx::system::update::automatic_downloads':
 include osx::system::update::local_cdn
 
 class { 'osx::system::update::local_cdn':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1061,7 +1061,7 @@ class { 'osx::system::update::schedule':
 include osx::system::app_quarantine
 
 class { 'osx::system::app_quarantine':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1071,7 +1071,7 @@ class { 'osx::system::app_quarantine':
 include osx::system::automatic_app_termination
 
 class { 'osx::system::automatic_app_termination':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1081,7 +1081,7 @@ class { 'osx::system::automatic_app_termination':
 include osx::system::crash_reporter
 
 class { 'osx::system::crash_reporter':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1099,7 +1099,7 @@ class { 'osx::system::host_name':
 include osx::system::restart_on_hang
 
 class { 'osx::system::restart_on_hang':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1107,7 +1107,7 @@ class { 'osx::system::restart_on_hang':
 
 ```puppet
 class { 'osx::system::recovery_message':
-  enabled => true,
+  ensure => 'present',
   value => 'message',
 }
 ```
@@ -1118,7 +1118,7 @@ class { 'osx::system::recovery_message':
 include osx::system::save_documents_to_icloud_by_default
 
 class { 'osx::system::save_documents_to_icloud_by_default':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1128,7 +1128,7 @@ class { 'osx::system::save_documents_to_icloud_by_default':
 include osx::system::save_windows_on_quit
 
 class { 'osx::system::save_windows_on_quit':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1146,7 +1146,7 @@ include osx::system::ui_server
 include osx::time_machine::ask_to_use_new_disks_for_backup
 
 class { 'osx::time_machine::ask_to_use_new_disks_for_backup':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1156,7 +1156,7 @@ class { 'osx::time_machine::ask_to_use_new_disks_for_backup':
 include osx::time_machine::local_backups
 
 class { 'osx::time_machine::local_backups':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1166,7 +1166,7 @@ class { 'osx::time_machine::local_backups':
 include osx::time_machine::unsupported_network_volumes
 
 class { 'osx::time_machine::unsupported_network_volumes':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1178,7 +1178,7 @@ class { 'osx::time_machine::unsupported_network_volumes':
 include osx::touchpad::gestures::app_expose
 
 class { 'osx::touchpad::gestures::app_expose':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1210,7 +1210,7 @@ class { 'osx::touchpad::gestures::four_finger_vertical_swipe':
 include osx::touchpad::gestures::launchpad
 
 class { 'osx::touchpad::gestures::launchpad':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1220,7 +1220,7 @@ class { 'osx::touchpad::gestures::launchpad':
 include osx::touchpad::gestures::page_swiping
 
 class { 'osx::touchpad::gestures::page_swiping':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1230,7 +1230,7 @@ class { 'osx::touchpad::gestures::page_swiping':
 include osx::touchpad::gestures::secondary_click
 
 class { 'osx::touchpad::gestures::secondary_click':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1240,7 +1240,7 @@ class { 'osx::touchpad::gestures::secondary_click':
 include osx::touchpad::gestures::tap_to_click
 
 class { 'osx::touchpad::gestures::tap_to_click':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1250,7 +1250,7 @@ class { 'osx::touchpad::gestures::tap_to_click':
 include osx::touchpad::gestures::tap_to_drag
 
 class { 'osx::touchpad::gestures::tap_to_drag':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1304,7 +1304,7 @@ class { 'osx::trash::when_emptying':
 include osx::universal_access::assistive_device_access
 
 class { 'osx::universal_access::assistive_device_access':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1330,7 +1330,7 @@ class { 'osx::universal_access::cursor_size':
 include osx::universal_access::flash_screen
 
 class { 'osx::universal_access::flash_screen':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
@@ -1342,7 +1342,7 @@ class { 'osx::universal_access::flash_screen':
 
 ```puppet
 class { 'osx::windows::animations':
-  ensure => 'present'
+  ensure => 'present',
   resize_duration => 4,
 }
 ```
@@ -1353,7 +1353,7 @@ class { 'osx::windows::animations':
 include osx::windows::miniaturize_on_double_click
 
 class { 'osx::windows::miniaturize_on_double_click':
-  ensure => 'present'
+  ensure => 'present',
 }
 ```
 
