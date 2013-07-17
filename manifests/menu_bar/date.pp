@@ -1,4 +1,4 @@
-# TODO add validation of date formats
+# TODO add validation of date formats and explanation of date formats in readme 
 #
 
 class osx::menu_bar::date(

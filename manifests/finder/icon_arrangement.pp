@@ -1,3 +1,5 @@
+# TODO add more styles
+
 class osx::finder::icon_arrangement($style = 'grid') {
 
   validate_re($style, '^(grid)$', "osx::finder::icon_arrangement([style] must be present or absent, is ${style}")

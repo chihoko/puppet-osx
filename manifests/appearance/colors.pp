@@ -1,3 +1,5 @@
+# TODO: Insert the rest of the colors listed in the General pref pane
+
 class osx::appearance::colors(
   $highlight = undef,
   $main      = undef) {
@@ -22,8 +24,6 @@ class osx::appearance::colors(
       notify => Exec['killall SystemUIServer'],
     }
   }
-
-  # TODO: Insert the rest of the colors listed in the General pref pane
 
   if $highlight != undef {
 

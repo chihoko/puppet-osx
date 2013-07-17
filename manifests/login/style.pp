@@ -1,3 +1,5 @@
+# TODO add more styles
+
 class osx::login::style($style = 'name and password') {
 
   validate_re($style, '^(name and password)$', "osx::login::style([ensure] must be one of the following: name and password, is ${style}")

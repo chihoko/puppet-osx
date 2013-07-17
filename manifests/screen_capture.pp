@@ -1,3 +1,5 @@
+# TODO add more file formats
+
 class osx::screen_capture(
   $format     = undef,
   $location   = undef,

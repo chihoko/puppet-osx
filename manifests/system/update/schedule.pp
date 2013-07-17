@@ -1,6 +1,7 @@
+# TODO: Add the rest of the frequencies
+
 class osx::system::update::schedule($frequency = 'daily') {
 
-  # TODO: Add the rest of the frequencies
 
   validate_re($frequency, '^(daily)$', "osx::system::update::schedule([ensure] must be daily; is ${frequency}")
 

@@ -1,6 +1,7 @@
 # TODO: Let the user pass in readable values instead of 1, 2, 3, etc.
 # Like 'list', 'icon-grid', etc.
-#
+# fill out options
+
 class osx::dialogs::file_view_mode($mode = 'list') {
 
   validate_re($mode, '^(list|icon-grid)$', "osx::dialogs::file_view_mode[mode] must be one of the following: list, icon-grid; is ${mode}")

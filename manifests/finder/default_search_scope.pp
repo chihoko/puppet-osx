@@ -1,5 +1,6 @@
 # TODO: Let the user pass in readable values
-#
+# add to list of possible values
+
 class osx::finder::default_search_scope($scope = 'current folder') {
 
   validate_re($scope, '^(current folder)$', "osx::finder::default_search_scope([scope] must be present or absent, is ${scope}")
