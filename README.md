@@ -1319,8 +1319,10 @@ class { 'osx::universal_access::cursor_size':
 `osx::universal_access::flash_screen` - toggle screen flashing on alert
 
 ```puppet
+include osx::universal_access::flash_screen
+
 class { 'osx::universal_access::flash_screen':
-  enabled => false,
+  ensure => 'present'
 }
 ```
 
