@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'osx::universal_access::assistive_device_access' do
   describe('enabled') do
-    let(:params) { {:enabled => true} }
+    let(:params) { {:ensure => 'present'} }
     it 'should set the value to "present"' do
       should contain_file('/private/var/db/.AccessibilityAPIEnabled').with({
         :ensure  => 'present',
@@ -15,7 +15,7 @@ describe 'osx::universal_access::assistive_device_access' do
   end
 
   describe('disabled') do
-    let(:params) { {:enabled => false} }
+    let(:params) { {:ensure => 'absent'} }
     it 'should set the value to "absent"' do
       should contain_file('/private/var/db/.AccessibilityAPIEnabled').with({
         :ensure  => 'absent',

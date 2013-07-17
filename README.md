@@ -1293,8 +1293,10 @@ class { 'osx::trash::when_emptying':
 `osx::universal_access::assistive_device_access` - toggle assistive device access
 
 ```puppet
+include osx::universal_access::assistive_device_access
+
 class { 'osx::universal_access::assistive_device_access':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
