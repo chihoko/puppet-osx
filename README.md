@@ -1199,8 +1199,10 @@ class { 'osx::touchpad::gestures::four_finger_vertical_swipe':
 `osx::touchpad::gestures::launchpad` - toggle pinch with thumb and thee fingers for launchpad
 
 ```puppet
+include osx::touchpad::gestures::launchpad
+
 class { 'osx::touchpad::gestures::launchpad':
-  enabled => true,
+  ensure => 'present'
 }
 ```
 
