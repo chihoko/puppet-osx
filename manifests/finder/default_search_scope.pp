@@ -3,6 +3,8 @@
 
 class osx::finder::default_search_scope($scope = 'current folder') {
 
+  include osx::finder
+
   validate_re($scope, '^(current folder)$', "osx::finder::default_search_scope([scope] must be present or absent, is ${scope}")
 
   $scope_code = $scope ? {

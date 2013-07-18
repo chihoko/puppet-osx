@@ -2,6 +2,8 @@ class osx::finder::date_format($format = 'relative') {
 
   validate_re($format, '^(relative|absolute)$', "osx::finder::date_format([ensure] must be relative or absolute, is ${format}")
 
+  include osx::finder
+
   $format_bool = $format ? {
     'relative' => true,
     default => false

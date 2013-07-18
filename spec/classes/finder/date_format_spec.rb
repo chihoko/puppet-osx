@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'osx::finder::date_format' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
+  it do
+    should include_class('osx::finder')
+  end
+
   describe 'relative' do
     let(:params) { {:format => 'relative'} }
     it 'should run the command with $format_bool set to true' do

@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'osx::finder::icon_previews' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
+  it do
+    should include_class('osx::finder')
+  end
+
   describe 'enabled' do
     let(:params) { {:ensure => 'present'} }
     it 'should run the list of execs' do

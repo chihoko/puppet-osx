@@ -1,7 +1,8 @@
 class osx::finder::icon_previews($ensure = 'present') {
-  include osx::finder
 
   validate_re($ensure, '^(present|absent)$', "osx::finder::icon_previews([ensure] must be present or absent, is ${ensure}")
+
+  include osx::finder
 
   $enabled = $ensure ? {
     present => true,

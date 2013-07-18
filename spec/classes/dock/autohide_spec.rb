@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'osx::dock::autohide' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
+  it do
+    should include_class('osx::dock')
+  end
+
   describe 'defaults' do
     it 'should set the value to "true"' do
       should include_class('osx::dock')

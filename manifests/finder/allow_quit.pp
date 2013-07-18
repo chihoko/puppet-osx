@@ -1,5 +1,7 @@
 class osx::finder::allow_quit($ensure = 'present') {
 
+  include osx::finder
+
   validate_re($ensure, '^(present|absent)$', "osx::finder::allow_quit([ensure] must be present or absent, is ${ensure}")
 
   $enabled = $ensure ? {

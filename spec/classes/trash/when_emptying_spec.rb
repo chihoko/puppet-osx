@@ -2,6 +2,11 @@ require 'spec_helper'
 
 describe 'osx::trash::when_emptying' do
   let(:facts) { {:boxen_user => 'ilikebees' } }
+
+  it do
+    should include_class('osx::finder')
+  end
+
   describe('warn') do
     let(:params) { {:warn => true} }
     it 'should set the value to true' do

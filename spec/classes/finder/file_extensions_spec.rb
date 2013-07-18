@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'osx::finder::file_extensions' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
+  it do
+    should include_class('osx::finder')
+  end
+
   describe 'display all' do
     let(:params) { {:display_all => true} }
     it 'should set the value to "true"' do

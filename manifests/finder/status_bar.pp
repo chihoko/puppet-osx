@@ -2,6 +2,8 @@ class osx::finder::status_bar($ensure = 'present') {
 
   validate_re($ensure, '^(present|absent)$', "osx::finder::status_bar([ensure] must be present or absent, is ${ensure}")
 
+  include osx::finder
+
   $enabled = $ensure ? {
     present => true,
     default => false

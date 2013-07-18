@@ -4,6 +4,10 @@ describe 'osx::finder::icon_arrangement' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
   let(:params) { {:style     => 'grid'} }
 
+  it do
+    should include_class('osx::finder')
+  end
+
   it 'should run the list of execs' do
     should contain_exec("/usr/libexec/plistbuddy -c 'Set :DesktopViewSettings:IconViewSettings:arrangeBy grid' /Users/ilikebees/Library/Preferences/com.apple.finder.plist").with({
       :notify => [

@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'osx::finder::default_file_view_mode' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
+  it do
+    should include_class('osx::finder')
+  end
+
   describe 'list' do
     let(:params) { {:mode => 'list'} }
     it 'should set the value to "Nlsv"' do

@@ -4,6 +4,8 @@
 
 class osx::dialogs::file_view_mode($mode = 'list') {
 
+  include osx::finder
+
   validate_re($mode, '^(list|icon-grid)$', "osx::dialogs::file_view_mode[mode] must be one of the following: list, icon-grid; is ${mode}")
 
   $mode_code = $mode ? {
