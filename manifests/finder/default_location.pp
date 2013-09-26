@@ -1,10 +1,12 @@
 # TODO: Let the user pass in readable values
 #
-class osx::finder::default_location($location) {
+class osx::finder::default_location($location = 'home directory') {
 
-  case $location {
-    'home directory': { $location_code = 'PfHm' }
-    default:          { $location_code = $location }
+  validate_re($location, '^(home directory)$', "osx::finder::default_location([location] must be present or absent, is ${location}")
+
+  $location_code = $location ? {
+    'home directory' => 'PfHm',
+    default          => 'PfHm'
   }
 
   boxen::osx_defaults { 'Set the Default Location Used When Opening a New Window in Finder':

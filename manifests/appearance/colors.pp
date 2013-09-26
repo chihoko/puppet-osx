@@ -1,3 +1,5 @@
+# TODO: Insert the rest of the colors listed in the General pref pane
+
 class osx::appearance::colors(
   $highlight = undef,
   $main      = undef) {
@@ -5,6 +7,8 @@ class osx::appearance::colors(
   include osx::system::ui_server
 
   if $main != undef {
+
+    validate_re($main, '^(blue|graphite|undef)$', "osx::appearance::colors[main] must be one of the following: blue, graphite; is ${main}")
     case $main {
       'blue':      { $main_int = 1 }
       'graphite':  { $main_int = 6 }
@@ -21,8 +25,10 @@ class osx::appearance::colors(
     }
   }
 
-  # TODO: Insert the rest of the colors listed in the General pref pane
   if $highlight != undef {
+
+    validate_re($highlight, '^(graphite)$', "osx::appearance::colors[highlight] must be one of the following: graphite; is ${highlight}")
+
     case $highlight {
       'graphite':  { $highlight_color = '0.780400 0.815700 0.858800' }
       default:     { $highlight_color = $highlight }

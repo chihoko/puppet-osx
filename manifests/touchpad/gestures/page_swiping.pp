@@ -1,7 +1,10 @@
-class osx::touchpad::gestures::page_swiping($enabled) {
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+class osx::touchpad::gestures::page_swiping($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::touchpad::gestures::page_swiping([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle the Ability to Swipe to Switch Pages':

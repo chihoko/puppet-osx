@@ -1,7 +1,10 @@
-class osx::login::power_options($shown) {
-  case $shown {
-    true:  { $shown_int = 1 }
-    false: { $shown_int = 0 }
+class osx::login::power_options($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::login::power_options([ensure] must be present or absent, is ${ensure}")
+
+  $shown_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggles Whether to Show Power Options on the Login Screen':

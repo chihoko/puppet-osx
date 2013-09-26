@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/puppetlabs/puppetlabs-stdlib.git
+  ref: master
+  sha: e0d4588bd2470109bd1eea4e597f1d205bf01b52
+  specs:
+    stdlib (4.1.0)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -11,4 +18,5 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 2.0.0)
   property_list_key (= 0.1.0)
+  stdlib (>= 0)
 

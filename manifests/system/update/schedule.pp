@@ -1,8 +1,13 @@
-class osx::system::update::schedule($frequency) {
+# TODO: Add the rest of the frequencies
 
-  # TODO: Add the rest of the frequencies
-  case $frequency {
-    'daily': { $frequency_int = 1 }
+class osx::system::update::schedule($frequency = 'daily') {
+
+
+  validate_re($frequency, '^(daily)$', "osx::system::update::schedule([ensure] must be daily; is ${frequency}")
+
+  $frequency_int = $frequency ? {
+    'daily' => 1,
+    default => 1
   }
 
   boxen::osx_defaults { 'Sets the Interval Between Software Update Checks':

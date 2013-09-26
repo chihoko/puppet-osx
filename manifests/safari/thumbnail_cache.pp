@@ -1,7 +1,10 @@
-class osx::safari::thumbnail_cache($enabled) {
-  case $enabled {
-    true:  { $enabled_int: 2 }
-    false: { $enabled_int: 0 }
+class osx::safari::thumbnail_cache($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::safari::thumbnail_cache([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 2,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle Whether the Cache for "Top Sites" and "History" is Enabled':

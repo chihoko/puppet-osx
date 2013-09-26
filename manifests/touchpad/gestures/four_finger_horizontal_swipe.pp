@@ -1,8 +1,10 @@
-class osx::touchpad::gestures::four_finger_horizontal_swipe($effect) {
+class osx::touchpad::gestures::four_finger_horizontal_swipe($effect = 'disabled') {
 
-  case $effect {
-    'disable':      { $effect_int = 0 }
-    'switch apps':  { $effect_int = 2 }
+  validate_re($effect, '^(disabled|switch apps)$', "osx::touchpad::gestures::four_finger_horizontal_swipe([effect] must be disabled or switch apps, is ${effect}")
+
+  $effect_int = $effect ? {
+    'switch apps' => 2,
+    default       => 0
   }
 
   boxen::osx_defaults { 'Sets the Effect for Swiping Left/Right with Four Fingers - Part 1':

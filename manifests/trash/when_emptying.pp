@@ -2,6 +2,8 @@ class osx::trash::when_emptying(
   $warn   = undef,
   $secure = undef) {
 
+  include osx::finder
+
   if $warn != undef {
     boxen::osx_defaults { 'Toggle the Warning when Emptying the Trash':
       user   => $::boxen_user,

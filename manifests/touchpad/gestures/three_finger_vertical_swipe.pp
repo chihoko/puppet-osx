@@ -1,8 +1,10 @@
-class osx::touchpad::gestures::three_finger_vertical_swipe($effect) {
+class osx::touchpad::gestures::three_finger_vertical_swipe($effect = 'mission control') {
 
-  case $effect {
-    'disabled':        { $effect_int = 0 }
-    'mission control': { $effect_int = 2 }
+  validate_re($effect, '^(disabled|mission control)$', "osx::touchpad::gestures::three_finger_vertical_swipe([effect] must be switch pages or switch apps, is ${effect}")
+
+  $effect_int = $effect ? {
+    'mission control' => 2,
+    default           => 0
   }
 
   boxen::osx_defaults { 'Sets the Effect for Swiping Up/Down with Three Fingers - Part 1':

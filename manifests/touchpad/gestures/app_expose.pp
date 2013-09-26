@@ -1,7 +1,10 @@
-class osx::touchpad::gestures::app_expose($enabled) {
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+class osx::touchpad::gestures::app_expose($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::touchpad::gestures::app_expose([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle the Ability to Swipe for App Expose':

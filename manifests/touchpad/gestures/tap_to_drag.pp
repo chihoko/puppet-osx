@@ -1,8 +1,10 @@
-class osx::touchpad::gestures::tap_to_drag($enabled) {
+class osx::touchpad::gestures::tap_to_drag($ensure = 'present') {
 
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+  validate_re($ensure, '^(present|absent)$', "osx::touchpad::gestures::tap_to_drag([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle the Ability Drag with an External Touchpad':

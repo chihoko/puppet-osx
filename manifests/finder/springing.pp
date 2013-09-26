@@ -1,14 +1,19 @@
 class osx::finder::springing(
-  $enabled = undef,
-  $delay   = undef) {
+  $ensure = 'present',
+  $delay  = undef) {
 
-  if $enabled != undef {
-    boxen::osx_defaults { 'Toggles Whether Springing is Enabled':
-      user   => $::boxen_user,
-      domain => 'NSGlobalDomain',
-      key    => 'com.apple.springing.enabled',
-      value  => $enabled,
-    }
+  validate_re($ensure, '^(present|absent)$', "osx::finder::springing([ensure] must be present or absent, is ${ensure}")
+
+  $enabled = $ensure ? {
+    present => true,
+    default => false
+  }
+
+  boxen::osx_defaults { 'Toggles Whether Springing is Enabled':
+    user   => $::boxen_user,
+    domain => 'NSGlobalDomain',
+    key    => 'com.apple.springing.enabled',
+    value  => $enabled,
   }
 
   if $delay != undef {

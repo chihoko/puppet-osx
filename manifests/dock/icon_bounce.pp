@@ -5,6 +5,7 @@ class osx::dock::icon_bounce(
   include osx::dock
 
   if $on_app_launch != undef {
+    validate_bool($on_app_launch)
     boxen::osx_defaults { 'Toggle the Bouncing Application Icon on Launch':
       user   => $::boxen_user,
       key    => 'launchanim',
@@ -15,6 +16,7 @@ class osx::dock::icon_bounce(
   }
 
   if $on_app_activity != undef {
+    validate_bool($on_app_activity)
     boxen::osx_defaults { 'Toggle the Bouncing Application Icon on Activity':
       user   => $::boxen_user,
       key    => 'no-bouncing',

@@ -1,14 +1,19 @@
 class osx::windows::animations(
-  $enabled         = undef,
+  $ensure          = 'present',
   $resize_duration = undef) {
 
-  if $enabled != undef {
-    boxen::osx_defaults { 'Toggle Open/Close Window Animations':
-      user   => $::boxen_user,
-      key    => 'NSAutomaticWindowAnimationsEnabled',
-      domain => 'NSGlobalDomain',
-      value  => $enabled,
-    }
+  validate_re($ensure, '^(present|absent)$', "osx::windows::animations([ensure] must be present or absent, is ${ensure}")
+
+  $enabled = $ensure ? {
+    present => true,
+    default => false
+  }
+
+  boxen::osx_defaults { 'Toggle Open/Close Window Animations':
+    user   => $::boxen_user,
+    key    => 'NSAutomaticWindowAnimationsEnabled',
+    domain => 'NSGlobalDomain',
+    value  => $enabled,
   }
 
   if $resize_duration != undef {

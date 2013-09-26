@@ -1,8 +1,15 @@
-class osx::touchpad::gestures::secondary_click($enabled) {
+class osx::touchpad::gestures::secondary_click($ensure = 'present') {
 
-  case $enabled {
-    true:  { $mouse_mode = 'TwoButton' }
-    false: { $mouse_mode = 'OneButton' }
+  validate_re($ensure, '^(present|absent)$', "osx::touchpad::gestures::secondary_click([ensure] must be present or absent, is ${ensure}")
+
+  $enabled = $ensure ? {
+    present => true,
+    default => false
+  }
+
+  $mouse_mode = $ensure ? {
+    present => 'TwoButton',
+    default => 'OneButton'
   }
 
   boxen::osx_defaults { 'Toggle Secondary "Right" Click on Internal Touchpad':

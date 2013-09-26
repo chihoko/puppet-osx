@@ -1,9 +1,11 @@
-class osx::firewall::logging_mode($enabled) {
+class osx::firewall::logging_mode($ensure = 'present') {
   include osx::firewall::config
 
-  case $enabled {
-    true:  { $enabled_value = 'on' }
-    false: { $enabled_value = 'off' }
+  validate_re($ensure, '^(present|absent)$', "osx::firewall::logging_mode([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_value = $ensure ? {
+    present => 'on',
+    default => 'off'
   }
 
   exec { 'Toggle Firewall Logging Mode':

@@ -1,14 +1,16 @@
-class osx::firewall::stealth_mode($enabled) {
+class osx::firewall::stealth_mode($ensure = 'present') {
   include osx::firewall::config
 
-  case $enabled {
-    true:  { $enabled_value = 'on' }
-    false: { $enabled_value = 'off' }
+  validate_re($ensure, '^(present|absent)$', "osx::firewall::stealth_mode([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_value = $ensure ? {
+    present => 'on',
+    default => 'off'
   }
 
-  case $enabled {
-    true:  { $enabled_check = 'enabled' }
-    false: { $enabled_check = 'disabled' }
+  $enabled_check = $ensure ? {
+    present => 'enabled',
+    default => 'disabled'
   }
 
   exec { 'Toggles Whether the Firewall Responds to Innocuous Requests like PING':

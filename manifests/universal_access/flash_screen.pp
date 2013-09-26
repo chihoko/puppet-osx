@@ -1,8 +1,10 @@
-class osx::universal_access::flash_screen($enabled) {
+class osx::universal_access::flash_screen($ensure = 'present') {
 
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+  validate_re($ensure, '^(present|absent)$', "osx::universal_access::flash_screen([ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle Whether the Screen Flashes When an Alert Occurs':

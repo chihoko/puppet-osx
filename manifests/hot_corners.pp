@@ -1,7 +1,7 @@
 class osx::hot_corners(
   $only_with_modifier = false,
-  $corner,
-  $action) {
+  $corner = 'bottom left',
+  $action = 'do nothing') {
 
   case $corner {
     'bottom left':   { $corner_abbreviation = 'bl' }
@@ -26,8 +26,8 @@ class osx::hot_corners(
   }
 
   case $only_with_modifier {
-    true:  { $modifier_int = 1 }
-    false: { $modifier_int = 0 }
+    true:    { $modifier_int = 1 }
+    default: { $modifier_int = 0 }
   }
 
   boxen::osx_defaults { "Set the ${corner} hot corner to ${action}":
@@ -38,7 +38,7 @@ class osx::hot_corners(
     value  => $action_int,
   }
 
-  boxen::osx_defaults { "Set the modifier for the ${corner} hot corner to ${modifier}":
+  boxen::osx_defaults { "Set the modifier for the ${corner} hot corner to ${only_with_modifier}":
     user   => $::boxen_user,
     key    => "wvous-${corner_abbreviation}-modifier",
     domain => 'com.apple.dock',

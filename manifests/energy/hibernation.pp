@@ -2,7 +2,7 @@ class osx::energy::hibernation(
   $on_battery      = undef,
   $when_plugged_in = undef ) {
 
-  if $on_battery != undef {
+  if is_integer($on_battery) {
     exec { 'Set Time Until the System Hibernates When on Battery Power':
       command => "pmset -b standbydelay ${on_battery}",
       user    => root,
@@ -10,7 +10,7 @@ class osx::energy::hibernation(
     }
   }
 
-  if $when_plugged_in != undef {
+  if is_integer($when_plugged_in) {
     exec { 'Set Time Until the System Hibernates When Plugged In':
       command => "pmset -c standbydelay ${when_plugged_in}",
       user    => root,

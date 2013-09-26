@@ -3,7 +3,7 @@
 # Examples
 #
 #   osx::recovery_message { 'If this Mac is found, please call 123-123-1234': }
-define osx::system::recovery_message(
+class osx::system::recovery_message(
   $ensure = 'present',
   $value  = $name,
 ) {

@@ -1,9 +1,11 @@
-class osx::dock::style($style) {
+class osx::dock::style($style = '3D') {
   include osx::dock
 
-  case $style {
-    '3D': { $style_mode = false }
-    '2D': { $style_mode = true }
+  validate_re($style, '^(3D|2D)$', "osx::disk_images::auto_mount([style] must be 3D or 2D, is ${style}")
+
+  $style_mode = $style ? {
+    '3D'    => false,
+    default => true
   }
 
   boxen::osx_defaults { 'Set the Style of the Dock':

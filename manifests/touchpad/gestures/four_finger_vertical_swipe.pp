@@ -1,8 +1,10 @@
-class osx::touchpad::gestures::four_finger_vertical_swipe($effect) {
+class osx::touchpad::gestures::four_finger_vertical_swipe($effect = 'disabled') {
 
-  case $effect {
-    'disabled':        { $effect_int = 0 }
-    'mission control': { $effect_int = 2 }
+  validate_re($effect, '^(disabled|mission control)$', "osx::touchpad::gestures::four_finger_vertical_swipe([effect] must be disabled or switch apps, is ${effect}")
+
+  $effect_int = $effect ? {
+    'mission control' => 2,
+    default           => 0
   }
 
   boxen::osx_defaults { 'Sets the Effect for Swiping Up/Down with Four Fingers - Part 1':

@@ -1,4 +1,12 @@
-class osx::login::admin_information($enabled) {
+class osx::login::admin_information($ensure = 'present') {
+
+  validate_re($ensure, '^(present|absent)$', "osx::login::admin_information([ensure] must be present or absent, is ${ensure}")
+
+  $enabled = $ensure ? {
+    present => true,
+    default => false
+  }
+
   if $enabled {
     boxen::osx_defaults { 'Show Admin Information when Clicking the Clock on the Login Screen':
       user   => root,

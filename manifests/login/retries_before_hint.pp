@@ -1,4 +1,4 @@
-class osx::login::retries_before_hint($attempts) {
+class osx::login::retries_before_hint($attempts = 5) {
   boxen::osx_defaults { 'Number of Attempts Before Password Hint is Shown':
     user   => root,
     key    => 'RetriesUntilHint',

@@ -1,8 +1,10 @@
-class osx::disk_utility::advanced_image_options($enabled) {
+class osx::disk_utility::advanced_image_options($ensure = 'present') {
 
-  case $enabled {
-    true:  { $enabled_int = 1 }
-    false: { $enabled_int = 0 }
+  validate_re($ensure, '^(present|absent)$', "osx::disk_utility::advanced_image_options[ensure] must be present or absent, is ${ensure}")
+
+  $enabled_int = $ensure ? {
+    present => 1,
+    default => 0
   }
 
   boxen::osx_defaults { 'Toggle Advanced Image Options in Disk Utility':
