@@ -16,7 +16,7 @@ class osx::mouse::movement(
     boxen::osx_defaults { 'Sets the Speed With Which the Mouse Scrolls Content':
       user   => $::boxen_user,
       domain => 'NSGlobalDomain',
-      key    => 'com.apple.mouse.scrolling',
+      key    => 'com.apple.scrollwheel.scaling',
       type   => 'float',
       value  => $scrolling_speed,
     }
