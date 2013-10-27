@@ -3,8 +3,8 @@ class osx::dashboard($ensure = 'present') {
   validate_re($ensure, '^(present|absent)$', "osx::dashboard([ensure] must be present or absent, is ${ensure}")
 
   $enabled = $ensure ? {
-    present => true,
-    default => false
+    present => '0',
+    default => '1'
   }
 
   boxen::osx_defaults { 'Toggle Whether Dashboard is Enabled':
