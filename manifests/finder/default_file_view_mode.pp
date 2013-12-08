@@ -6,11 +6,14 @@
 class osx::finder::default_file_view_mode($mode = 'list') {
   include osx::finder
 
-  validate_re($mode, '^(list|icons)$', "osx::finder::default_file_view_mode([mode] must be oneof the following: list, icons; is ${mode}")
+  validate_re($mode, '^(icons|list|columns|cover_flow)$', "osx::finder::default_file_view_mode([mode] must be oneof the following: icons, list, columns, cover_flow; is ${mode}")
 
   $mode_code = $mode ? {
-    'list'  => 'Nlsv',
-    default => 'Nlsv'
+    'icons'      => 'icnv',
+    'list'       => 'Nlsv',
+    'columns'    => 'clmv',
+    'cover_flow' => 'Flwv',
+    default      => 'Nlsv'
   }
 
   boxen::osx_defaults { 'Set the File View Mode Used By Default When Opening New Finder Windows':
@@ -20,7 +23,7 @@ class osx::finder::default_file_view_mode($mode = 'list') {
     value  => $mode_code,
     notify => [
       Exec['killall Finder'],
-      Exec['Remove All .DS_Store Files'],
+      #Exec['Remove All .DS_Store Files'],
     ]
   }
 }
